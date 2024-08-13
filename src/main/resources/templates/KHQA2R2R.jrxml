@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KHQA2R2R" pageWidth="1078" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="1038" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="8ec5a939-c7d6-4f4a-a635-3b3d6e8f4fcf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="rptMonthTxt" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["January"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rptYrYYYY" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["2023"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prdFrom" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prdTo" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="totalsGroupName" class="java.lang.String"/>
+	<field name="typeName" class="java.lang.String"/>
+	<field name="daysSection" class="java.lang.String"/>
+	<field name="agencyCaused" class="java.lang.Double"/>
+	<field name="agencyThirdParty" class="java.lang.Double"/>
+	<field name="systemCaused" class="java.lang.Double"/>
+	<field name="clientDelay" class="java.lang.Double"/>
+	<field name="clientInterview" class="java.lang.Double"/>
+	<field name="clientRenewal" class="java.lang.Double"/>
+	<field name="clientThirdParty" class="java.lang.Double"/>
+	<field name="unknownMailingAddress" class="java.lang.Double"/>
+	<field name="sectionName" class="java.lang.String"/>
+	<sortField name="sectionName"/>
+	<variable name="TypeGroupAgencyCaused" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{agencyCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupAgencyThirdParty" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{agencyThirdParty}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupSystemCaused" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{systemCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupClientDelay" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientDelay}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupClientInterview" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientInterview}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupClientRenewal" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientRenewal}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupClientThirdParty" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientThirdParty}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalAgencyCaused" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{agencyCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalAgencyThirdParty" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{agencyThirdParty}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalSystemCaused" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{systemCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalClientDelay" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientDelay}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalClientInterview" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientInterview}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalClientRenewal" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientRenewal}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalClientThirdParty" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientThirdParty}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupUnknownMailingAddress" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{unknownMailingAddress}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalClientUnknownMailingAddress" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{unknownMailingAddress}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="AgencyCausedTotal" class="java.lang.Double" resetType="Column">
+		<variableExpression><![CDATA[$F{agencyCaused}+$F{agencyThirdParty}+$F{systemCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="ClientCausedTotal" class="java.lang.Double" resetType="Column">
+		<variableExpression><![CDATA[$F{clientDelay}+$F{clientInterview}+$F{clientRenewal}+$F{clientThirdParty}+$F{unknownMailingAddress}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedAgencyCaused" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{agencyCaused} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedAgencyThirdParty" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{agencyThirdParty} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedSystemCaused" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{systemCaused} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedClientDelay" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{clientDelay} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedClientInterview" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{clientInterview} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedClientRenewal" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{clientRenewal} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedClientThirdParty" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{clientThirdParty} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalNonExpeditedClientUnknownMailingAddress" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[!($F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )) ? $F{unknownMailingAddress} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedAgencyCaused" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{agencyCaused} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedAgencyThirdParty" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{agencyThirdParty} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedSystemCaused" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{systemCaused}: 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedClientDelay" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{clientDelay} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedClientInterview" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{clientInterview} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedClientRenewal" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{clientRenewal} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedClientThirdParty" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{clientThirdParty} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalExpeditedClientUnknownMailingAddress" class="java.lang.Double" resetType="Group" resetGroup="MainGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{typeName}.equalsIgnoreCase( "Expedited Approvals" ) || $F{typeName}.equalsIgnoreCase( "Expedited Denials" )? $F{unknownMailingAddress} : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupAgencyCaused" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{agencyCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupAgencyThirdParty" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{agencyThirdParty}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupSysCaused" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{systemCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupClientDelay" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientDelay}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupClientInterview" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientInterview}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupClientRenewal" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientRenewal}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupClientThirdParty" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{clientThirdParty}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TotalsGroupUnknownMailingAddress" class="java.lang.Double" resetType="Group" resetGroup="TotalsGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{unknownMailingAddress}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupAgencyCausedTotal" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup">
+		<variableExpression><![CDATA[$V{TypeGroupAgencyCaused}+$V{TypeGroupAgencyThirdParty}+$V{TypeGroupSystemCaused}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TypeGroupClientCausedTotal" class="java.lang.Double" resetType="Group" resetGroup="TypeGroup">
+		<variableExpression><![CDATA[$V{TypeGroupClientDelay}+$V{TypeGroupClientInterview}+$V{TypeGroupClientRenewal}+$V{TypeGroupClientThirdParty}+$V{TypeGroupUnknownMailingAddress}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<group name="SectionGroup" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{sectionName}]]></groupExpression>
+		<groupHeader>
+			<band height="90">
+				<staticText>
+					<reportElement x="0" y="50" width="140" height="40" uuid="cd81cc23-e77e-4e6e-be20-eb783de35963"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DISPOSITIONS
+----------------------------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="200" y="20" width="838" height="30" uuid="32d8da95-7f95-46fd-8319-b224c3f7ca62"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[UNTIMELY REASON DESCRIPTIONS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="200" y="50" width="60" height="40" uuid="ee0727a8-cd7d-48d6-91ac-768b50affff8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AGENCY
+CAUSED
+----------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="335" y="50" width="60" height="40" uuid="187baf85-7d4e-4364-9351-2aa7f9bd1b23">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SYSTEM
+CAUSED
+-----------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="545" y="50" width="45" height="40" uuid="a2a7ca49-8545-4bd1-a232-c8467a290020">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENT
+DELAY
+------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="50" width="90" height="40" uuid="be52da4d-7f3b-40b3-bb87-a8022bf65ff3">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AGENCY 
+CAUSED TOTAL
+-------------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="655" y="50" width="60" height="40" uuid="df513cfd-99ee-418c-8ea3-a1e435f707e8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENT
+RENEWAL
+----------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="790" y="50" width="100" height="40" uuid="199994ac-75c1-4122-9ee7-d97f96fbf870">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[UNKNOWN
+MAILING ADDRESS
+-----------------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="260" y="50" width="75" height="40" uuid="22fe26f9-3343-4319-977e-5e5c78b88fa2">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AGENCY
+THIRD PARTY
+---------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="485" y="50" width="60" height="40" uuid="7404e419-0b39-4e5a-b316-3596df0d5be1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AGENCY 
+CAUSED %
+-----------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="140" y="50" width="60" height="40" uuid="aab7f49e-ba7a-4406-92ed-1b069ec3b94e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTALS
+-----------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="590" y="50" width="65" height="40" uuid="583edc06-3703-4cea-9572-d741a3e8d1a0">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENT
+INTERVIEW
+------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="890" y="50" width="83" height="40" uuid="5b5ee045-814f-430f-b39b-de081ea3d09b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENT
+CAUSED TOTAL
+------------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="973" y="50" width="65" height="40" uuid="e45e2c1d-7856-4460-ba44-f5d133b1fb53">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENT
+CAUSED %
+------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="715" y="50" width="75" height="40" uuid="a5668c07-f111-467e-86c9-560b40b27865">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENT
+THIRD PARTY
+---------------------]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="315" y="0" width="387" height="18" uuid="8201eed8-99fd-4604-8591-ed109848560d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["FOR "+$F{sectionName}.toUpperCase()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="MainGroup" isStartNewPage="true" keepTogether="true" preventOrphanFooter="true">
+		<groupExpression><![CDATA[$F{sectionName}]]></groupExpression>
+		<groupHeader>
+			<band height="18">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="485" y="0" width="60" height="18" uuid="ffc6a7f9-0f74-444f-a675-d48cb47d1151">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalAgencyCaused}+$V{TotalAgencyThirdParty}+$V{TotalSystemCaused}+$V{TotalClientDelay}+$V{TotalClientInterview}+$V{TotalClientRenewal}+$V{TotalClientThirdParty}+$V{TotalClientUnknownMailingAddress})!=0 ?
+(($V{TotalAgencyCaused}+$V{TotalAgencyThirdParty}+$V{TotalSystemCaused})/($V{TotalAgencyCaused}+$V{TotalAgencyThirdParty}+$V{TotalSystemCaused}+$V{TotalClientDelay}+$V{TotalClientInterview}+$V{TotalClientRenewal}+$V{TotalClientThirdParty}+$V{TotalClientUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="140" height="18" uuid="55a6639d-d393-4ea5-8f2d-9249b2076832">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[GRAND TOTAL]]></text>
+				</staticText>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="335" y="0" width="60" height="18" uuid="c00c3503-a68a-4868-8137-20f000a4e3cc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalSystemCaused}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="140" y="0" width="60" height="18" uuid="755a7706-7ba9-4423-b8e8-76b87e0e3804">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalAgencyCaused}+$V{TotalAgencyThirdParty}+$V{TotalSystemCaused}+$V{TotalClientDelay}+$V{TotalClientInterview}+$V{TotalClientRenewal}+$V{TotalClientThirdParty}+$V{TotalClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="715" y="0" width="75" height="18" uuid="cbcc2efd-7bc5-4ea7-951f-f130193df496">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalClientThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="200" y="0" width="60" height="18" uuid="c47efa7f-50de-4352-9268-bcffdc639da8">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalAgencyCaused}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="973" y="0" width="65" height="18" uuid="607c1615-db74-44c4-ae93-69fe7fded20c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalAgencyCaused}+$V{TotalAgencyThirdParty}+$V{TotalSystemCaused}+$V{TotalClientDelay}+$V{TotalClientInterview}+$V{TotalClientRenewal}+$V{TotalClientThirdParty}+$V{TotalClientUnknownMailingAddress})!=0 ?
+(($V{TotalClientDelay}+$V{TotalClientInterview}+$V{TotalClientRenewal}+$V{TotalClientThirdParty}+$V{TotalClientUnknownMailingAddress})/($V{TotalAgencyCaused}+$V{TotalAgencyThirdParty}+$V{TotalSystemCaused}+$V{TotalClientDelay}+$V{TotalClientInterview}+$V{TotalClientRenewal}+$V{TotalClientThirdParty}+$V{TotalClientUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="545" y="0" width="45" height="18" uuid="ef984861-4d55-4dc2-b33f-4a4090586018">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalClientDelay}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="590" y="0" width="65" height="18" uuid="804b5fd2-1c3b-4295-a3ad-5dae92f76b38">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalClientInterview}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="890" y="0" width="83" height="18" uuid="5ba6fd52-6859-48e0-a61c-eab2ad04a9ff">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalClientDelay}+$V{TotalClientInterview}+$V{TotalClientRenewal}+$V{TotalClientThirdParty}+$V{TotalClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="655" y="0" width="60" height="18" uuid="bf3d5990-a201-41af-b873-1430cb235842">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalClientRenewal}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="260" y="0" width="75" height="18" uuid="e7b60d87-d290-4e43-952a-73ca2484fdcd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalAgencyThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="790" y="0" width="100" height="18" uuid="9aea8c81-8e44-4236-88b1-4c282d4e8dd0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="40"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="MainGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="395" y="0" width="90" height="18" uuid="5fc900a5-1557-4689-8fc6-9a155297f5ae">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalAgencyCaused}+$V{TotalAgencyThirdParty}+$V{TotalSystemCaused}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="36">
+				<textField pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="485" y="18" width="60" height="18" uuid="690d6908-c3cd-4dab-a6ab-dc53962281fe">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalNonExpeditedAgencyCaused}+$V{TotalNonExpeditedAgencyThirdParty}+$V{TotalNonExpeditedSystemCaused}+$V{TotalNonExpeditedClientDelay}+$V{TotalNonExpeditedClientInterview}+$V{TotalNonExpeditedClientRenewal}+$V{TotalNonExpeditedClientThirdParty}+$V{TotalNonExpeditedClientUnknownMailingAddress})!=0 ?
+(($V{TotalNonExpeditedAgencyCaused}+$V{TotalNonExpeditedAgencyThirdParty}+$V{TotalNonExpeditedSystemCaused})/($V{TotalNonExpeditedAgencyCaused}+$V{TotalNonExpeditedAgencyThirdParty}+$V{TotalNonExpeditedSystemCaused}+$V{TotalNonExpeditedClientDelay}+$V{TotalNonExpeditedClientInterview}+$V{TotalNonExpeditedClientRenewal}+$V{TotalNonExpeditedClientThirdParty}+$V{TotalNonExpeditedClientUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="200" y="0" width="60" height="18" uuid="1146895b-a0fe-43e0-bce2-576d2abd08f6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedAgencyCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="260" y="18" width="75" height="18" uuid="c527852f-99ea-4e88-9f1e-32a1c5c95ec3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedAgencyThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="545" y="0" width="45" height="18" uuid="0c827e0c-4ab8-4c92-912d-845be4fd3dcb">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedClientDelay}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="395" y="0" width="90" height="18" uuid="5a92c224-37c7-41ed-a644-7d00137579c6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedAgencyCaused}+$V{TotalExpeditedAgencyThirdParty}+$V{TotalExpeditedSystemCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="890" y="18" width="83" height="18" uuid="63d0cf63-0351-4f8c-bc9c-4b15ed89a1e1">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedClientDelay}+$V{TotalNonExpeditedClientInterview}+$V{TotalNonExpeditedClientRenewal}+$V{TotalNonExpeditedClientThirdParty}+$V{TotalNonExpeditedClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="655" y="18" width="60" height="18" uuid="7aeb967f-13e3-4157-9acb-59b3de75cfdf">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedClientRenewal}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="395" y="18" width="90" height="18" uuid="ced05a8e-50f5-4038-a194-8c440fbf121f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedAgencyCaused}+$V{TotalNonExpeditedAgencyThirdParty}+$V{TotalNonExpeditedSystemCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="790" y="18" width="100" height="18" uuid="98e7dd1a-80be-440f-b711-4536ba8a6de2">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="40"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="140" y="0" width="60" height="18" uuid="2d6241e5-470f-4f18-947e-a2b2cf944ce4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedAgencyCaused}+$V{TotalExpeditedAgencyThirdParty}+$V{TotalExpeditedSystemCaused}+$V{TotalExpeditedClientDelay}+$V{TotalExpeditedClientInterview}+$V{TotalExpeditedClientRenewal}+$V{TotalExpeditedClientThirdParty}+$V{TotalExpeditedClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="715" y="0" width="75" height="18" uuid="a8a3c81b-5114-4511-a1ed-8c4262a80af4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedClientThirdParty}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="18" width="140" height="18" uuid="f39c1a8a-06a6-48ba-a441-4ca4b9e6a6b7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTAL NON-EXPEDITED]]></text>
+				</staticText>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="890" y="0" width="83" height="18" uuid="f179daf3-698f-4b84-9c1f-d51654f89d60">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedClientDelay}+$V{TotalExpeditedClientInterview}+$V{TotalExpeditedClientRenewal}+$V{TotalExpeditedClientThirdParty}+$V{TotalExpeditedClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="590" y="18" width="65" height="18" uuid="0b0c455c-8c88-46d6-91f6-b2216948bdb5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedClientInterview}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="790" y="0" width="100" height="18" uuid="e8e69b0f-3272-45de-bc7e-466224a5ff63">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="40"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="715" y="18" width="75" height="18" uuid="4419f893-9ec9-4eab-a4ed-7026c82ca3b8">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedClientThirdParty}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="140" height="18" uuid="419729db-4bc9-46d9-8a0f-d2398551f137">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTAL EXPEDITED]]></text>
+				</staticText>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="140" y="18" width="60" height="18" uuid="da591116-4c49-4e11-a1cf-0636b2980cd8">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedAgencyCaused}+$V{TotalNonExpeditedAgencyThirdParty}+$V{TotalNonExpeditedSystemCaused}+$V{TotalNonExpeditedClientDelay}+$V{TotalNonExpeditedClientInterview}+$V{TotalNonExpeditedClientRenewal}+$V{TotalNonExpeditedClientThirdParty}+$V{TotalNonExpeditedClientUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="973" y="18" width="65" height="18" uuid="d21f81f4-e7dc-433f-a5e4-2d37cf05cae6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalNonExpeditedAgencyCaused}+$V{TotalNonExpeditedAgencyThirdParty}+$V{TotalNonExpeditedSystemCaused}+$V{TotalNonExpeditedClientDelay}+$V{TotalNonExpeditedClientInterview}+$V{TotalNonExpeditedClientRenewal}+$V{TotalNonExpeditedClientThirdParty}+$V{TotalNonExpeditedClientUnknownMailingAddress})!=0 ?
+(($V{TotalNonExpeditedClientDelay}+$V{TotalNonExpeditedClientInterview}+$V{TotalNonExpeditedClientRenewal}+$V{TotalNonExpeditedClientThirdParty}+$V{TotalNonExpeditedClientUnknownMailingAddress})/($V{TotalNonExpeditedAgencyCaused}+$V{TotalNonExpeditedAgencyThirdParty}+$V{TotalNonExpeditedSystemCaused}+$V{TotalNonExpeditedClientDelay}+$V{TotalNonExpeditedClientInterview}+$V{TotalNonExpeditedClientRenewal}+$V{TotalNonExpeditedClientThirdParty}+$V{TotalNonExpeditedClientUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="590" y="0" width="65" height="18" uuid="0494dc5a-b602-459e-9ff2-7273b06bdb92">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedClientInterview}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="335" y="18" width="60" height="18" uuid="92eac8a2-68b8-4743-889a-530db78403fc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedSystemCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="260" y="0" width="75" height="18" uuid="2398c4fc-5ac9-4e40-82ce-c6db139037dd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedAgencyThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="973" y="0" width="65" height="18" uuid="3ab87d4f-1f43-4d7c-80b5-189cfcbf24bf">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalExpeditedAgencyCaused}+$V{TotalExpeditedAgencyThirdParty}+$V{TotalExpeditedSystemCaused}+$V{TotalExpeditedClientDelay}+$V{TotalExpeditedClientInterview}+$V{TotalExpeditedClientRenewal}+$V{TotalExpeditedClientThirdParty}+$V{TotalExpeditedClientUnknownMailingAddress})!=0 ?
+(($V{TotalExpeditedClientDelay}+$V{TotalExpeditedClientInterview}+$V{TotalExpeditedClientRenewal}+$V{TotalExpeditedClientThirdParty}+$V{TotalExpeditedClientUnknownMailingAddress})/($V{TotalExpeditedAgencyCaused}+$V{TotalExpeditedAgencyThirdParty}+$V{TotalExpeditedSystemCaused}+$V{TotalExpeditedClientDelay}+$V{TotalExpeditedClientInterview}+$V{TotalExpeditedClientRenewal}+$V{TotalExpeditedClientThirdParty}+$V{TotalExpeditedClientUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="200" y="18" width="60" height="18" uuid="be88f920-53a4-4b7b-9cfd-95cff0ba5280">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedAgencyCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="655" y="0" width="60" height="18" uuid="e53f32d8-b9ea-4043-bb1a-488c84e5ce67">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedClientRenewal}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="335" y="0" width="60" height="18" uuid="f440fad6-986f-4103-ab86-ca335787a5ad">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalExpeditedSystemCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="545" y="18" width="45" height="18" uuid="b752fed8-6754-431d-b302-966d952ac0f4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalNonExpeditedClientDelay}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="485" y="0" width="60" height="18" uuid="f0623e3d-8612-4141-b7c3-811183d488ab">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalExpeditedAgencyCaused}+$V{TotalExpeditedAgencyThirdParty}+$V{TotalExpeditedSystemCaused}+$V{TotalExpeditedClientDelay}+$V{TotalExpeditedClientInterview}+$V{TotalExpeditedClientRenewal}+$V{TotalExpeditedClientThirdParty}+$V{TotalExpeditedClientUnknownMailingAddress})!=0 ?
+(($V{TotalExpeditedAgencyCaused}+$V{TotalExpeditedAgencyThirdParty}+$V{TotalExpeditedSystemCaused})/($V{TotalExpeditedAgencyCaused}+$V{TotalExpeditedAgencyThirdParty}+$V{TotalExpeditedSystemCaused}+$V{TotalExpeditedClientDelay}+$V{TotalExpeditedClientInterview}+$V{TotalExpeditedClientRenewal}+$V{TotalExpeditedClientThirdParty}+$V{TotalExpeditedClientUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="TotalsGroup" keepTogether="true">
+		<groupExpression><![CDATA[$F{totalsGroupName}]]></groupExpression>
+		<groupHeader>
+			<band height="18">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup">
+					<reportElement x="0" y="0" width="140" height="18" uuid="eee6ff60-173e-4c9a-98ec-92988824e2da">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="4"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{totalsGroupName}.toUpperCase()]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="545" y="0" width="45" height="18" uuid="8103815b-a329-4ced-bec8-b18398bfe73a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupClientDelay}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="655" y="0" width="60" height="18" uuid="6bf6124a-33aa-4a53-a630-304f54cfb3fa">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupClientRenewal}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="335" y="0" width="60" height="18" uuid="7142b513-7ffd-41b0-8440-cd4f3d559a92">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupSysCaused}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="140" y="0" width="60" height="18" uuid="451a124a-f53c-4f7e-bd6c-f2f51cebe98f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupAgencyCaused}+$V{TotalsGroupAgencyThirdParty}+$V{TotalsGroupSysCaused}+$V{TotalsGroupClientDelay}+$V{TotalsGroupClientInterview}+$V{TotalsGroupClientRenewal}+$V{TotalsGroupClientThirdParty}+$V{TotalsGroupUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="590" y="0" width="65" height="18" uuid="f7fb90f0-5b40-46f9-89b9-d1ca535ec605">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupClientInterview}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="395" y="0" width="90" height="18" uuid="aff5e0c5-4b2d-48d7-9f6b-6f5fe6e6c89f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupAgencyCaused}+$V{TotalsGroupAgencyThirdParty}+$V{TotalsGroupSysCaused}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="200" y="0" width="60" height="18" uuid="9aae8873-b769-493d-b3fd-44d5f0579321">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupAgencyCaused}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="973" y="0" width="65" height="18" uuid="073623be-5903-4145-8616-ab1898a5509e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalsGroupAgencyCaused}+$V{TotalsGroupAgencyThirdParty}+$V{TotalsGroupSysCaused}+$V{TotalsGroupClientDelay}+$V{TotalsGroupClientInterview}+$V{TotalsGroupClientRenewal}+$V{TotalsGroupClientThirdParty}+$V{TotalsGroupUnknownMailingAddress})!=0 ?
+(($V{TotalsGroupClientDelay}+$V{TotalsGroupClientInterview}+$V{TotalsGroupClientRenewal}+$V{TotalsGroupClientThirdParty}+$V{TotalsGroupUnknownMailingAddress})/($V{TotalsGroupAgencyCaused}+$V{TotalsGroupAgencyThirdParty}+$V{TotalsGroupSysCaused}+$V{TotalsGroupClientDelay}+$V{TotalsGroupClientInterview}+$V{TotalsGroupClientRenewal}+$V{TotalsGroupClientThirdParty}+$V{TotalsGroupUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="485" y="0" width="60" height="18" uuid="40ce40a4-eef1-4469-bfc6-b9a1aafcb3ea">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TotalsGroupAgencyCaused}+$V{TotalsGroupAgencyThirdParty}+$V{TotalsGroupSysCaused}+$V{TotalsGroupClientDelay}+$V{TotalsGroupClientInterview}+$V{TotalsGroupClientRenewal}+$V{TotalsGroupClientThirdParty}+$V{TotalsGroupUnknownMailingAddress})!=0 ?
+(($V{TotalsGroupAgencyCaused}+$V{TotalsGroupAgencyThirdParty}+$V{TotalsGroupSysCaused})/($V{TotalsGroupAgencyCaused}+$V{TotalsGroupAgencyThirdParty}+$V{TotalsGroupSysCaused}+$V{TotalsGroupClientDelay}+$V{TotalsGroupClientInterview}+$V{TotalsGroupClientRenewal}+$V{TotalsGroupClientThirdParty}+$V{TotalsGroupUnknownMailingAddress})) : 0]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="715" y="0" width="75" height="18" uuid="beb5a2d5-3e55-484e-85fe-9cc866cff898">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupClientThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="790" y="0" width="100" height="18" uuid="841908af-bf6d-4d82-95c6-836bfdc03428">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="40"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="260" y="0" width="75" height="18" uuid="0e623067-f08b-4c5b-b541-ade36d8dabe6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupAgencyThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="TotalsGroup" pattern="#,##0;(#,##0)">
+					<reportElement x="890" y="0" width="83" height="18" uuid="50572ccd-ad8c-4759-a464-619621b96907">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[!$F{totalsGroupName}.equalsIgnoreCase( "Total Renewals" )]]></printWhenExpression>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalsGroupClientDelay}+$V{TotalsGroupClientInterview}+$V{TotalsGroupClientRenewal}+$V{TotalsGroupClientThirdParty}+$V{TotalsGroupUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="TypeGroup" keepTogether="true">
+		<groupExpression><![CDATA[$F{typeName}]]></groupExpression>
+		<groupHeader>
+			<band height="18">
+				<printWhenExpression><![CDATA[!$F{typeName}.isEmpty()]]></printWhenExpression>
+				<textField evaluationTime="Group" evaluationGroup="TypeGroup">
+					<reportElement x="0" y="0" width="140" height="18" uuid="9a384ee8-fc3f-43ac-b01c-f37826a0e356">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{typeName}.toUpperCase()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="18">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<staticText>
+					<reportElement x="0" y="0" width="140" height="18" uuid="efb300da-1b98-415b-8364-a311b53f1a13">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTAL]]></text>
+				</staticText>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="200" y="0" width="60" height="18" uuid="35e065f2-9319-4b2f-9d87-ff82331d09ea">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupAgencyCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="260" y="0" width="75" height="18" uuid="59eb2a3c-e7cd-4b4e-8950-657da8f0a5d3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupAgencyThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="335" y="0" width="60" height="18" uuid="c015b727-6445-42c0-a15e-484fe66ef209">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupSystemCaused}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="545" y="0" width="45" height="18" uuid="a7b149ba-85fd-4eac-af52-1b88c9b32e60">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupClientDelay}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="590" y="0" width="65" height="18" uuid="53156120-2abe-4fec-99cd-fc70091f1c3e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupClientInterview}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="655" y="0" width="60" height="18" uuid="ec6c74ff-9933-42e5-a66c-8e1ae506cd50">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupClientRenewal}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="715" y="0" width="75" height="18" uuid="fb5ac5b1-2f19-4c54-880b-3575db15396d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="24"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupClientThirdParty}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="790" y="0" width="100" height="18" uuid="7864f244-3dfb-4f9d-886e-71cb6de3efd8">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="40"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupUnknownMailingAddress}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="395" y="0" width="90" height="18" uuid="1d230b07-4075-46f6-a28b-bf44cf8801f2">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupAgencyCausedTotal}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="890" y="0" width="83" height="18" uuid="6a95d6ec-212a-476e-b600-dc51b511ad51">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="28"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupClientCausedTotal}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="140" y="0" width="60" height="18" uuid="32da60ba-4a94-4d31-8ab4-787417dfaf68">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box rightPadding="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="485" y="0" width="60" height="18" uuid="9ad2743d-8b8c-4436-a21b-bdfb2d77e211">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})!=0 ?
+(($V{TypeGroupAgencyCausedTotal})/($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})) : 0]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.0%;(#,##0.0) %">
+					<reportElement x="973" y="0" width="65" height="18" uuid="94e48aec-7156-4f82-b896-7cacbc05da73">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box rightPadding="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})!=0 ?
+(($V{TypeGroupClientCausedTotal})/($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})) : 0]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<pageHeader>
+		<band height="72">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="880" y="0" width="158" height="18" uuid="24952ffd-9c6c-4b7d-a64d-1cbcdec95859">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="880" y="18" width="158" height="18" uuid="3eff8847-d407-4ca6-907b-fcf14033590f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="f019a924-0b48-43bc-af75-47c2167fe6b9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="1cb4aee3-bf92-424d-a816-dae1d2564958">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="54" width="387" height="18" uuid="fe468a50-c8d9-41ea-ae6a-364595b5edfc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REPORT PERIOD "+($P{prdFrom}.equalsIgnoreCase($P{prdTo})?("FOR "+$P{prdFrom}):("FROM "+$P{prdFrom}+" TO "+$P{prdTo}))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="315" y="0" width="387" height="18" uuid="c345f212-0236-4085-9123-a88dee17070d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="36" width="387" height="18" uuid="2e099c28-550e-4f73-ab82-b682dd728cf9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUMMARY OF SNAP UNTIMELY DISPOSITIONS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="18" width="387" height="18" uuid="ca47a698-3ee0-4ea8-a9ae-6836c4e880c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="18">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="140" height="18" uuid="f67318ae-5f26-41a0-8e23-b0096863cb39">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="10" rightPadding="4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{daysSection}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="200" y="0" width="60" height="18" uuid="fc731d13-1562-49cb-baf5-3dc57f6e153e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agencyCaused}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="260" y="-1" width="75" height="18" uuid="05ded359-b425-49f4-a857-96f5a04acffa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agencyThirdParty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="335" y="-1" width="60" height="18" uuid="c8c8fc66-003d-4cd9-b3a6-a8dc95be401d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{systemCaused}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="545" y="-1" width="45" height="18" uuid="addbd60d-b032-4ccd-a356-1e260aa1d861">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientDelay}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="655" y="0" width="60" height="18" uuid="dc06c683-a6bc-4dfa-82cc-46678d71fcbb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientRenewal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="715" y="0" width="75" height="18" uuid="892a39ae-87be-4088-a32a-f1d85673a365">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientThirdParty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="790" y="0" width="100" height="18" uuid="0bcdce1a-bc6b-42e7-b484-328a79b4d552">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="40"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unknownMailingAddress}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="590" y="0" width="65" height="18" uuid="035f03b3-5052-4c54-8264-34ba105054d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientInterview}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="395" y="0" width="90" height="18" uuid="50387794-cb65-4340-b1fe-f4cacb7e83a1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="28"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{AgencyCausedTotal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="890" y="0" width="83" height="18" uuid="db138f1b-70de-42af-92b5-4de904839046">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="28"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{ClientCausedTotal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="140" y="0" width="60" height="18" uuid="a9351baf-c99a-485b-817a-18b9d455f7b2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agencyCaused}+$F{agencyThirdParty}+$F{systemCaused}+$F{clientDelay}+$F{clientInterview}+$F{clientRenewal}+$F{clientThirdParty}+$F{unknownMailingAddress}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Auto" pattern="#,##0.0%;(#,##0.0) %">
+				<reportElement x="485" y="0" width="60" height="18" uuid="dcb42bd2-b5bc-49b7-a2bf-9ce3adbcfb84">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})!=0 ?
+(($F{agencyCaused}+$F{agencyThirdParty}+$F{systemCaused})/($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})) : 0]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Auto" pattern="#,##0.0%;(#,##0.0) %">
+				<reportElement x="973" y="0" width="65" height="18" uuid="880567f4-01f6-4db4-8a5f-7bfe2cbcf770">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})!=0 ?
+(($F{clientDelay}+$F{clientInterview}+$F{clientRenewal}+$F{clientThirdParty}+$F{unknownMailingAddress})/($V{TypeGroupAgencyCausedTotal}+$V{TypeGroupClientCausedTotal})) : 0]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band/>
+	</summary>
+	<noData>
+		<band height="180">
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="bbb1ddd0-db86-428c-8a83-9ebbe195fda1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="bfa9874a-c835-42a3-9989-1eef0e938878">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="880" y="0" width="158" height="18" uuid="2622c9f4-bffc-4f89-a0dd-b30ba98ca68f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="880" y="18" width="158" height="18" uuid="57a15b2b-38b3-4e51-b19f-cd0dd091d22f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: 1 OF 1"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="72" width="387" height="18" uuid="ed058d4e-d5aa-4f35-8a91-e8eaab733265">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["BY PROCESSING CENTER"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="162" width="395" height="18" uuid="e2a28481-ce22-4742-ad98-31d40c2c3180">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="122" width="140" height="40" uuid="1b7ae0bd-53eb-465f-9fca-3e7e1ee02c30"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISPOSITIONS
+----------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="92" width="838" height="30" uuid="b010c836-d679-4bdd-8e49-88693fa1c73a"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNTIMELY REASON DESCRIPTIONS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="122" width="60" height="40" uuid="97fd1b0c-9295-444e-a207-75daa7c9d3c1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AGENCY
+CAUSED
+----------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="122" width="60" height="40" uuid="e704ba01-9383-481a-9491-5503006046ea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SYSTEM
+CAUSED
+-----------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="122" width="45" height="40" uuid="57d2c070-ad2d-4b87-9c45-c40b549d695d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENT
+DELAY
+------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="122" width="90" height="40" uuid="d5deaefe-cdb5-44ff-80c6-75c2e033b2aa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AGENCY 
+CAUSED TOTAL
+-------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="122" width="60" height="40" uuid="dfabd2e4-c9b2-4957-89f9-530668f5d800">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENT
+RENEWAL
+----------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="790" y="122" width="100" height="40" uuid="e1b18261-456a-42f9-a885-5a8d686d84bb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNKNOWN
+MAILING ADDRESS
+-----------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="122" width="75" height="40" uuid="ef35bed6-d4f3-4901-b178-b00fee2a902b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AGENCY
+THIRD PARTY
+---------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="122" width="60" height="40" uuid="72733429-5aec-445a-9eff-e8eae6413b3d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AGENCY 
+CAUSED %
+-----------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="122" width="60" height="40" uuid="06dc04c6-fac6-47b6-a9af-9d9c6403db44">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTALS
+-----------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="590" y="122" width="65" height="40" uuid="6ccd969c-2ec4-4fc0-8d20-c85310726bd4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENT
+INTERVIEW
+------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="890" y="122" width="83" height="40" uuid="8478afb2-960e-4c47-841f-2fa2551ce6fa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENT
+CAUSED TOTAL
+------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="973" y="122" width="65" height="40" uuid="dc932ddf-195a-4565-8430-c58f78d30762">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENT
+CAUSED %
+------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="715" y="122" width="75" height="40" uuid="478834b3-31c6-4f2e-bdfc-436ba11d60a7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENT
+THIRD PARTY
+---------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="0" width="387" height="18" uuid="00d64d8c-2945-45e5-a1ba-afd52981b808">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="18" width="387" height="18" uuid="a209853b-f4a6-46b7-b15a-a3fdcce60fe9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="36" width="387" height="18" uuid="29c48cdf-356f-40ea-adeb-bfddc90c6506">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUMMARY OF SNAP UNTIMELY DISPOSITIONS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="315" y="54" width="387" height="18" uuid="0571afb8-cc17-4abe-b320-cae3dbc47f43">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REPORT PERIOD "+($P{prdFrom}.equalsIgnoreCase($P{prdTo})?("FOR "+$P{prdFrom}):("FROM "+$P{prdFrom}+" TO "+$P{prdTo}))]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

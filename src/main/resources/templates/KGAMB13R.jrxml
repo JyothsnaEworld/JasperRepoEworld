@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KGAMB13R" pageWidth="792" pageHeight="832" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_TH" mode="Opaque" forecolor="#000000" backcolor="#FFFFFF">
+		<pen lineStyle="Dashed"/>
+		<box>
+			<pen lineWidth="0.0" lineStyle="Dashed" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineColor="#000000"/>
+			<bottomPen lineWidth="0.0" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<parameter name="rptMonthTxt" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["January"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rptYrYYYY" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["2023"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rptYrMonthYYYYMM" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptMonthNumTxt" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="progType" class="java.lang.String"/>
+	<field name="orderVal" class="java.lang.Integer"/>
+	<field name="errorType" class="java.lang.String"/>
+	<field name="progTypeCount" class="java.lang.Integer"/>
+	<field name="progTypeAmount" class="java.lang.Double"/>
+	<field name="dateTxt" class="java.lang.String"/>
+	<field name="caseStatus" class="java.lang.String"/>
+	<pageHeader>
+		<band height="85">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="592" y="0" width="160" height="18" uuid="7746c473-6fa3-4554-8d99-135149de3a06">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="592" y="18" width="160" height="18" uuid="ce6af60a-0210-4f91-abf2-32d1345c6d96">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="18" width="376" height="18" uuid="8432d6ca-d00f-49d5-b7b4-5425b4dca3bd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="376" height="18" uuid="803e9073-b99b-4fab-98e2-da46df6918d0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="1" width="160" height="18" uuid="db6f3f33-bffe-4388-bf8c-276ed46e6b4d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="19" width="160" height="18" uuid="9350293f-dfda-4060-b7b7-98b715742e8b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="36" width="376" height="18" uuid="271bc648-4cd8-447a-92ef-5109eb41d045">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTHLY NEW CLAIMS REPORT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="54" width="376" height="18" uuid="d19b3459-823e-45c4-833d-db426d134787">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MONTH: "+($P{rptMonthNumTxt}.length()==1?("0"+$P{rptMonthNumTxt}):$P{rptMonthNumTxt})+"/"+$P{rptYrYYYY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="350">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout"/>
+			<frame>
+				<reportElement positionType="Float" x="0" y="0" width="752" height="110" uuid="ef1689c6-aab9-49e1-a5e4-b306bb789c61"/>
+				<crosstab columnBreakOffset="500">
+					<reportElement x="10" y="0" width="732" height="80" uuid="b844753a-f5bf-4524-bb11-befe48370324">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+						<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+						<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+						<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0" lineStyle="Dashed"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<crosstabHeaderCell>
+						<cellContents>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineWidth="1.0" lineStyle="Dashed"/>
+								<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="18" uuid="add8100a-ea6b-4790-b0b4-3e0c383e3144"/>
+								<box>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<text><![CDATA[DATE]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabHeaderCell>
+					<rowGroup name="prgDateVal" width="60" totalPosition="End">
+						<bucket order="None" class="java.lang.String">
+							<bucketExpression><![CDATA[$F{dateTxt}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents mode="Opaque" style="Crosstab_CH">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineStyle="Dashed" lineColor="#000000"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textField>
+									<reportElement x="0" y="0" width="60" height="18" uuid="15d51ba8-c719-4028-a1f6-341874068d4d"/>
+									<box rightPadding="22">
+										<pen lineStyle="Dashed"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{prgDateVal}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents mode="Opaque" style="Crosstab_CT">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="60" height="18" uuid="72f7ebc6-d269-439e-9f92-eb4cf10aa489"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[TOTALS]]></text>
+								</staticText>
+							</cellContents>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<columnGroup name="prgTypeCode" height="18" totalPosition="Start" mergeHeaderCells="false">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{progType}]]></bucketExpression>
+						</bucket>
+						<crosstabColumnHeader>
+							<cellContents mode="Transparent" style="Crosstab_CH">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textField>
+									<reportElement x="0" y="0" width="105" height="18" uuid="dd58c59a-f6d0-40a2-b7f9-be2fab348f73"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<textFieldExpression><![CDATA["PROG TYPE " + $V{prgTypeCode_MEASURE}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabColumnHeader>
+						<crosstabTotalColumnHeader>
+							<cellContents mode="Transparent" style="Crosstab_CT">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="105" height="18" uuid="fae6ce3e-5d8a-408b-b79d-d94a2ff82b43"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[TOTAL]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="35" y="30" width="70" height="12" uuid="7decd6da-f7cb-4cf1-a2ac-f8b67e63c8bd"/>
+									<box leftPadding="16">
+										<pen lineStyle="Dashed"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[$]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="0" y="30" width="35" height="12" uuid="801d81de-321f-4317-befe-436846e8796c"/>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dashed"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[#]]></text>
+								</staticText>
+							</cellContents>
+						</crosstabTotalColumnHeader>
+					</columnGroup>
+					<columnGroup name="prgType" height="24">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{errorType}]]></bucketExpression>
+						</bucket>
+						<crosstabColumnHeader>
+							<cellContents mode="Transparent" style="Crosstab_CH">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textField>
+									<reportElement x="0" y="0" width="105" height="12" uuid="44550e35-9af8-4f5a-9250-8acba5993652"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{prgType_MEASURE}]]></textFieldExpression>
+								</textField>
+								<staticText>
+									<reportElement x="0" y="12" width="35" height="12" uuid="d5c04b2e-7a82-472d-80b6-831a4e56ad63"/>
+									<box>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[#]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="35" y="12" width="70" height="12" uuid="99e5b722-1896-4e6b-92c6-c28727bb4c4d"/>
+									<box leftPadding="16">
+										<pen lineWidth="1.0" lineStyle="Dashed"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[$]]></text>
+								</staticText>
+							</cellContents>
+						</crosstabColumnHeader>
+						<crosstabTotalColumnHeader>
+							<cellContents mode="Opaque" style="Crosstab_CG">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</cellContents>
+						</crosstabTotalColumnHeader>
+					</columnGroup>
+					<measure name="srcCount_MEASURE" class="java.lang.Integer" calculation="Sum">
+						<measureExpression><![CDATA[$F{progTypeCount}]]></measureExpression>
+					</measure>
+					<measure name="srcAmount_MEASURE" class="java.lang.Double" calculation="Sum">
+						<measureExpression><![CDATA[$F{progTypeAmount}]]></measureExpression>
+					</measure>
+					<measure name="prgTypeCode_MEASURE" class="java.lang.String">
+						<measureExpression><![CDATA[$F{progType}]]></measureExpression>
+					</measure>
+					<measure name="prgType_MEASURE" class="java.lang.Object">
+						<measureExpression><![CDATA[$F{errorType}]]></measureExpression>
+					</measure>
+					<crosstabCell width="105" height="18">
+						<cellContents mode="Opaque" style="Crosstab_CD">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement x="0" y="0" width="35" height="18" uuid="6d8e769f-a297-4105-9721-776664019b42"/>
+								<box rightPadding="8">
+									<pen lineWidth="1.0" lineStyle="Dashed"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcCount_MEASURE}]]></textFieldExpression>
+							</textField>
+							<textField pattern="¤#,##0.00;¤(#,##0.00)">
+								<reportElement x="35" y="0" width="70" height="18" uuid="e3575100-e699-4a33-a100-d9ec62505a0d"/>
+								<box rightPadding="8">
+									<pen lineStyle="Dashed"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcAmount_MEASURE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="105" height="18" columnTotalGroup="prgTypeCode">
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineStyle="Dashed" lineColor="#000000"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement x="0" y="0" width="35" height="18" uuid="06e380f0-b76e-4e70-aedf-34e0d9eead59"/>
+								<box rightPadding="8">
+									<pen lineWidth="1.0" lineStyle="Dashed"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcCount_MEASURE}]]></textFieldExpression>
+							</textField>
+							<textField pattern="¤#,##0.00;¤(#,##0.00)">
+								<reportElement x="35" y="0" width="70" height="18" uuid="285067af-c157-4334-a640-2d3f5293c3c7"/>
+								<box rightPadding="8">
+									<pen lineStyle="Dashed"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcAmount_MEASURE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="105" height="18" rowTotalGroup="prgDateVal">
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+							</box>
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement x="0" y="0" width="35" height="18" uuid="2e54dcea-f0a5-47e7-a08d-1f25588dd7e4"/>
+								<box rightPadding="8">
+									<pen lineWidth="1.0" lineStyle="Dashed"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcCount_MEASURE}]]></textFieldExpression>
+							</textField>
+							<textField pattern="¤#,##0.00;¤(#,##0.00)">
+								<reportElement x="35" y="0" width="70" height="18" uuid="48a0f52c-c54b-414e-85d4-126af441e417"/>
+								<box rightPadding="8">
+									<pen lineStyle="Dashed"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcAmount_MEASURE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="105" height="18" rowTotalGroup="prgDateVal" columnTotalGroup="prgTypeCode">
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+							</box>
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement x="0" y="0" width="35" height="18" uuid="46f802f7-8d4a-43a0-96bc-2ed20e3826a0"/>
+								<box rightPadding="8">
+									<pen lineWidth="1.0" lineStyle="Dashed"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcCount_MEASURE}]]></textFieldExpression>
+							</textField>
+							<textField pattern="¤#,##0.00;¤(#,##0.00)">
+								<reportElement x="35" y="0" width="70" height="18" uuid="6943b670-93a4-4343-be9f-0a741a243aa1"/>
+								<box rightPadding="8">
+									<leftPen lineWidth="1.0" lineStyle="Dashed"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcAmount_MEASURE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="6" height="40" columnTotalGroup="prgType">
+						<cellContents mode="Opaque" style="Crosstab_CG">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="6" height="40" rowTotalGroup="prgDateVal" columnTotalGroup="prgType">
+						<cellContents mode="Opaque" style="Crosstab_CT"/>
+					</crosstabCell>
+				</crosstab>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="240" width="752" height="110" uuid="9e87071f-33a8-4434-983a-ad46e0c0c33d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<crosstab isRepeatColumnHeaders="false">
+					<reportElement x="191" y="44" width="370" height="60" uuid="b4217672-ce28-4179-a1c5-b7ccd6bcb811">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+						<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+						<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+						<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0" lineStyle="Dashed" lineColor="#000000"/>
+						<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					</box>
+					<rowGroup name="prgTypeCode" width="190" totalPosition="End">
+						<bucket order="None" class="java.lang.Integer">
+							<bucketExpression><![CDATA[$F{progType}]]></bucketExpression>
+							<orderByExpression><![CDATA[$V{orderValVar}]]></orderByExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents mode="Opaque">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<textField>
+									<reportElement positionType="Float" x="0" y="0" width="190" height="20" uuid="e5cc7311-0238-4606-bf57-bc8fc0314df4"/>
+									<box leftPadding="8"/>
+									<textElement verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<textFieldExpression><![CDATA["PROGRAM " +$V{prgTypeCodeVa} + " NEW CLAIMS"]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents mode="Opaque">
+								<staticText>
+									<reportElement x="0" y="0" width="190" height="20" uuid="325a8b8c-a0a6-45e9-b760-17811000a998"/>
+									<box>
+										<pen lineWidth="1.0" lineStyle="Dotted"/>
+										<topPen lineWidth="1.0" lineStyle="Dashed"/>
+										<leftPen lineWidth="0.0"/>
+										<bottomPen lineWidth="0.0"/>
+										<rightPen lineWidth="0.0"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[Total              ]]></text>
+								</staticText>
+							</cellContents>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<columnGroup name="prgType" height="20" totalPosition="End">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{errorType}]]></bucketExpression>
+						</bucket>
+						<crosstabColumnHeader>
+							<cellContents mode="Opaque">
+								<textField>
+									<reportElement positionType="Float" x="0" y="0" width="60" height="20" uuid="27f4f80b-6f7f-4820-977c-20b5692eaffe"/>
+									<box rightPadding="10"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{prgType}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabColumnHeader>
+						<crosstabTotalColumnHeader>
+							<cellContents mode="Opaque">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</cellContents>
+						</crosstabTotalColumnHeader>
+					</columnGroup>
+					<measure name="srcCount_MEASURE" class="java.lang.Integer" calculation="Sum">
+						<measureExpression><![CDATA[$F{progTypeCount}]]></measureExpression>
+					</measure>
+					<measure name="prgTypeCodeVa" class="java.lang.String">
+						<measureExpression><![CDATA[$F{progType}]]></measureExpression>
+					</measure>
+					<measure name="orderValVar" class="java.lang.Integer">
+						<measureExpression><![CDATA[$F{orderVal}]]></measureExpression>
+					</measure>
+					<crosstabCell width="60" height="20">
+						<cellContents mode="Opaque">
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement positionType="Float" x="0" y="0" width="60" height="20" uuid="6138e0fd-0201-4d3f-a1b4-9e1fd00858cb"/>
+								<box rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcCount_MEASURE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="20" columnTotalGroup="prgType">
+						<cellContents mode="Opaque"/>
+					</crosstabCell>
+					<crosstabCell width="60" height="20" rowTotalGroup="prgTypeCode">
+						<cellContents mode="Opaque">
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement positionType="Float" x="0" y="0" width="60" height="20" uuid="51521d71-55c6-4d26-9a76-775d6e9a3edc"/>
+								<box rightPadding="10">
+									<pen lineStyle="Dotted"/>
+									<topPen lineWidth="1.0" lineStyle="Dashed"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{srcCount_MEASURE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="20" rowTotalGroup="prgTypeCode" columnTotalGroup="prgType">
+						<cellContents mode="Opaque"/>
+					</crosstabCell>
+				</crosstab>
+				<staticText>
+					<reportElement x="221" y="13" width="310" height="30" uuid="01faf874-1283-4913-abc4-65a10aa70308"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[STATISTICAL SUMMARY OF DAILY NEW CLAIMS BY PROGRAM
+(ERROR TYPE HH/AG/IV BY ROUNDING)]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="120" width="752" height="110" uuid="b19d264b-0dbe-4739-b09a-b52646211e08"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="201" y="16" width="350" height="18" uuid="31f75233-c354-4aa1-bf1d-8b9fad9c8bb9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[SUMMARY OF NEW CASH ASSISTANCE CLAIMS BY PROGRAM TYPE ]]></text>
+				</staticText>
+				<crosstab isRepeatColumnHeaders="false">
+					<reportElement x="236" y="34" width="280" height="54" uuid="354b7548-a60d-4966-8314-c4ab2def9f52">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+						<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+						<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+						<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0" lineStyle="Dashed"/>
+						<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					</box>
+					<crosstabHeaderCell>
+						<cellContents>
+							<staticText>
+								<reportElement x="1" y="1" width="58" height="34" uuid="ddd644f4-7677-4bb7-94ca-467206f5a9a7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<text><![CDATA[PROG
+TYPE]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabHeaderCell>
+					<rowGroup name="prgTypeCode" width="60" totalPosition="End">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{progType}]]></bucketExpression>
+						</bucket>
+						<crosstabRowHeader>
+							<cellContents mode="Opaque">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineWidth="0.0"/>
+								</box>
+								<textField>
+									<reportElement x="0" y="0" width="60" height="18" uuid="75d6065f-1c4b-4276-b344-35ae4cfd3496"/>
+									<box rightPadding="20"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{prgTypeCode}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabRowHeader>
+						<crosstabTotalRowHeader>
+							<cellContents mode="Opaque">
+								<box>
+									<pen lineWidth="0.0"/>
+								</box>
+							</cellContents>
+						</crosstabTotalRowHeader>
+					</rowGroup>
+					<columnGroup name="prgType" height="36" totalPosition="End">
+						<bucket class="java.lang.String">
+							<bucketExpression><![CDATA[$F{errorType}]]></bucketExpression>
+						</bucket>
+						<crosstabColumnHeader>
+							<cellContents mode="Opaque">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+								</box>
+								<textField>
+									<reportElement x="0" y="0" width="0" height="0" uuid="18568908-2aab-4f73-8f22-0f706b6e38ff"/>
+									<textFieldExpression><![CDATA[$V{prgType}]]></textFieldExpression>
+								</textField>
+							</cellContents>
+						</crosstabColumnHeader>
+						<crosstabTotalColumnHeader>
+							<cellContents mode="Opaque">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+								<box>
+									<pen lineWidth="0.0"/>
+								</box>
+								<staticText>
+									<reportElement x="5" y="0" width="105" height="18" uuid="13adef16-00c5-4c24-b0a8-a2dcf0ac9678"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[ACTIVE]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="115" y="0" width="105" height="18" uuid="c40fec65-6e6a-4e3c-83b7-cba472f47885"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[INACTIVE]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="5" y="18" width="35" height="18" uuid="f8229791-7afd-4852-bd70-ef5fc44fb365"/>
+									<box leftPadding="8"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[#]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="40" y="18" width="70" height="18" uuid="2a8c1a3b-2b37-4bf1-bff9-ae936c8a136a"/>
+									<box leftPadding="8"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[AMOUNT]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="150" y="18" width="70" height="18" uuid="5d0ebc74-1620-4f75-86fc-d017eeabf87a"/>
+									<box leftPadding="8"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[AMOUNT]]></text>
+								</staticText>
+								<staticText>
+									<reportElement x="115" y="18" width="35" height="18" uuid="4b6bf2a1-d865-4e71-90e9-1913ef142021"/>
+									<box leftPadding="8"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font fontName="ArialFontFamily"/>
+									</textElement>
+									<text><![CDATA[#]]></text>
+								</staticText>
+							</cellContents>
+						</crosstabTotalColumnHeader>
+					</columnGroup>
+					<measure name="srcAmount_MEASURE" class="java.lang.Double" calculation="Sum">
+						<measureExpression><![CDATA[$F{progTypeAmount}]]></measureExpression>
+					</measure>
+					<measure name="activeAmount" class="java.lang.Double" calculation="Sum">
+						<measureExpression><![CDATA[$F{caseStatus}.toUpperCase().startsWith("A") ? $F{progTypeAmount} : 0]]></measureExpression>
+					</measure>
+					<measure name="activeCount" class="java.lang.Integer" calculation="Sum">
+						<measureExpression><![CDATA[$F{caseStatus}.toUpperCase().startsWith("A") ? 1: 0]]></measureExpression>
+					</measure>
+					<measure name="inActiveAmount" class="java.lang.Double" calculation="Sum">
+						<measureExpression><![CDATA[$F{caseStatus}.toUpperCase().startsWith("I") ? $F{progTypeAmount} : 0]]></measureExpression>
+					</measure>
+					<measure name="inActiveCount" class="java.lang.Integer" calculation="Sum">
+						<measureExpression><![CDATA[$F{caseStatus}.toUpperCase().startsWith("I") ? 1: 0]]></measureExpression>
+					</measure>
+					<crosstabCell width="0" height="18">
+						<cellContents mode="Opaque">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="220" height="18" columnTotalGroup="prgType">
+						<cellContents mode="Opaque">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineWidth="0.0"/>
+							</box>
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement x="5" y="0" width="35" height="18" uuid="14671aea-a683-4b04-abdb-5999ecafedb3"/>
+								<box rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{activeCount}]]></textFieldExpression>
+							</textField>
+							<textField pattern="¤#,##0.00;¤(#,##0.00)">
+								<reportElement x="40" y="0" width="70" height="18" uuid="09ef7882-efbb-4ae3-a188-19c2053df7f1"/>
+								<box rightPadding="8"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{activeAmount}]]></textFieldExpression>
+							</textField>
+							<textField pattern="¤#,##0.00;¤(#,##0.00)">
+								<reportElement x="150" y="0" width="70" height="18" uuid="c5ffd9e1-b9e2-4912-9ff4-0f7c5687d643"/>
+								<box rightPadding="8"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{inActiveAmount}]]></textFieldExpression>
+							</textField>
+							<textField pattern="#,##0;(#,##0)">
+								<reportElement x="115" y="0" width="35" height="18" uuid="03acb499-b667-4e18-a690-1e8ef952257a"/>
+								<box rightPadding="10"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{inActiveCount}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="0" height="0" rowTotalGroup="prgTypeCode">
+						<cellContents mode="Opaque">
+							<box>
+								<pen lineWidth="0.0"/>
+							</box>
+						</cellContents>
+					</crosstabCell>
+					<crosstabCell width="220" height="0" rowTotalGroup="prgTypeCode" columnTotalGroup="prgType">
+						<cellContents mode="Opaque">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineWidth="0.0"/>
+							</box>
+						</cellContents>
+					</crosstabCell>
+				</crosstab>
+				<break>
+					<reportElement x="0" y="0" width="100" height="1" uuid="b88c044b-cca0-4280-b209-1de8c20179d3"/>
+				</break>
+			</frame>
+		</band>
+	</summary>
+	<noData>
+		<band height="103">
+			<textField>
+				<reportElement x="592" y="0" width="160" height="18" uuid="437ee313-f41f-4cc9-960a-014c0e105be4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="18" width="376" height="18" uuid="186aab8e-9a1c-424f-8f55-8c7e89ff75ee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="376" height="18" uuid="4188c221-afdd-4190-b0e0-5dcd77468153">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="aedb6a11-cfb6-42bf-93f0-05a75e7d0e55">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="9eb7f072-be86-4bd1-a3af-ca04b0aa81ca">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="36" width="376" height="18" uuid="cb1ec3f9-aca1-4cf9-9ba3-c4e6f18edf77">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTHLY NEW CLAIMS REPORT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="54" width="376" height="18" uuid="0427b9f7-6e03-4ae7-8622-b354491dcfc8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MONTH: "+($P{rptMonthNumTxt}.length()==1?("0"+$P{rptMonthNumTxt}):$P{rptMonthNumTxt})+"/"+$P{rptYrYYYY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="592" y="18" width="160" height="18" uuid="71301767-e179-45fa-8901-c41292eaa8b1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: 1 OF 1"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="85" width="470" height="18" uuid="96d7dea1-f3fd-4b49-a194-6cb759277738">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

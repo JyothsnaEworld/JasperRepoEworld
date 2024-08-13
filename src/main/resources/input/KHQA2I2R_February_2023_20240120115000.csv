@@ -1,0 +1,42 @@
+KPT Processing Center,Appls Pending At Beg Of Report Period (Both Non-Expedited and Expedited),,248,9,809,49
+KPT Processing Center,Appls Received This Report Period (Both Non-Expedited and Expedited),,1048,34,986,56
+KPT Processing Center,Total Dispositions,Timely,1044,41,1163,64
+KPT Processing Center,Total Dispositions,Untimely (Agency Caused),8,0,4,1
+KPT Processing Center,Total Dispositions,Untimely (Client Caused),12,1,6,0
+KPT Processing Center,Total Approvals,Timely,808,36,1116,64
+KPT Processing Center,Total Approvals,Untimely (Agency Caused),3,0,0,0
+KPT Processing Center,Total Approvals,Untimely (Client Caused),5,1,0,0
+KPT Processing Center,Total Non-Expedited Approvals,Timely,639,32,250,125
+KPT Processing Center,Total Non-Expedited Approvals,Untimely (Agency Caused),0,0,100,50
+KPT Processing Center,Total Non-Expedited Approvals,Untimely (Client Caused),3,0,25,75
+KPT Processing Center,Total Expedited Approvals,Timely,169,4,50,100
+KPT Processing Center,Total Expedited Approvals,Untimely (Agency Caused),3,0,1,0
+KPT Processing Center,Total Expedited Approvals,Untimely (Client Caused),2,1,0,0
+KPT Processing Center,Total Denials,Timely,236,5,47,0
+KPT Processing Center,Total Denials,Untimely (Agency Caused),5,0,4,1
+KPT Processing Center,Total Denials,Untimely (Client Caused),7,0,6,0
+KPT Processing Center,Total Non-Expedited Denials,Timely,223,4,25,5
+KPT Processing Center,Total Non-Expedited Denials,Untimely (Agency Caused),4,0,2,0
+KPT Processing Center,Total Non-Expedited Denials,Untimely (Client Caused),2,0,1,0
+KPT Processing Center,Total Expedited Denials,Timely,39,0,10,2
+KPT Processing Center,Total Expedited Denials,Untimely (Agency Caused),3,0,0,0
+KPT Processing Center,Total Expedited Denials,Untimely (Client Caused),7,0,3,1
+KPT Processing Center,Total Non-Expedited Dispositions,Timely,149,6,35,15
+KPT Processing Center,Total Non-Expedited Dispositions,Untimely (Agency Caused),16,1,5,2
+KPT Processing Center,Total Non-Expedited Dispositions,Untimely (Client Caused),14,1,4,1
+KPT Processing Center,Total Expedited Dispositions,Timely,1113,48,125,45
+KPT Processing Center,Total Expedited Dispositions,Untimely (Agency Caused),233,6,30,5
+KPT Processing Center,Total Expedited Dispositions,Untimely (Client Caused),96,3,15,1
+KPT Processing Center,Total Non-Expedited Applications Pending at the End of Report Period,30 Days And Under,1431,10,1190,79
+KPT Processing Center,Total Non-Expedited Applications Pending at the End of Report Period,31 - 40 Days,134,0,249,0
+KPT Processing Center,Total Non-Expedited Applications Pending at the End of Report Period,41 - 50 Days,143,1,88,0
+KPT Processing Center,Total Non-Expedited Applications Pending at the End of Report Period,51 - 60 Days,33,0,132,3
+KPT Processing Center,Total Non-Expedited Applications Pending at the End of Report Period,61 - 90 Days,7,0,99,0
+KPT Processing Center,Total Non-Expedited Applications Pending at the End of Report Period,91 + Days,0,0,0,0
+KPT Processing Center,Total Expedited Applications Pending at the End of Report Period,30 Days And Under,61,1,48,3
+KPT Processing Center,Total Expedited Applications Pending at the End of Report Period,31 - 40 Days,75,1,38,1
+KPT Processing Center,Total Expedited Applications Pending at the End of Report Period,41 - 50 Days,41,1,18,1
+KPT Processing Center,Total Expedited Applications Pending at the End of Report Period,51 - 60 Days,7,0,29,0
+KPT Processing Center,Total Expedited Applications Pending at the End of Report Period,61 - 90 Days,1,0,3,0
+KPT Processing Center,Total Expedited Applications Pending at the End of Report Period,91 + Days,0,0,0,0
+KPT Processing Center,Total Applications Pending At The End of Report Period (Both Non-Expedited and Expedited),,,,,

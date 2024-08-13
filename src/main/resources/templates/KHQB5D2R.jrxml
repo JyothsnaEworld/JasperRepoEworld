@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KHQB5D2R" printOrder="Horizontal" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="Dataset1" uuid="8ec5a939-c7d6-4f4a-a635-3b3d6e8f4fcf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptMonthTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptYrYYYY" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prdFrom" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prdTo" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="islandName" class="java.lang.String"/>
+	<field name="rrNum" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="rrWorkOhau"/>
+	</field>
+	<field name="rnNum" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="rnUnavailableOhau"/>
+	</field>
+	<field name="rcNum" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="rcDeclinesCompletesOhau"/>
+	</field>
+	<field name="rpNum" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="rjEmployedOhau"/>
+	</field>
+	<variable name="rr_Statewide" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{rrNum}]]></variableExpression>
+	</variable>
+	<variable name="rn_Statewide" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{rnNum}]]></variableExpression>
+	</variable>
+	<variable name="rc_Statewide" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{rcNum}]]></variableExpression>
+	</variable>
+	<variable name="rp_Statewide" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{rpNum}]]></variableExpression>
+	</variable>
+	<variable name="rr_MauiCounty" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{islandName}.equalsIgnoreCase("Maui")||$F{islandName}.equalsIgnoreCase("Molokai")||$F{islandName}.equalsIgnoreCase("Lanai")?$F{rrNum}:0]]></variableExpression>
+	</variable>
+	<variable name="rn_MauiCounty" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{islandName}.equalsIgnoreCase("Maui")||$F{islandName}.equalsIgnoreCase("Molokai")||$F{islandName}.equalsIgnoreCase("Lanai")?$F{rnNum}:0]]></variableExpression>
+	</variable>
+	<variable name="rc_MauiCounty" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{islandName}.equalsIgnoreCase("Maui")||$F{islandName}.equalsIgnoreCase("Molokai")||$F{islandName}.equalsIgnoreCase("Lanai")?$F{rcNum}:0]]></variableExpression>
+	</variable>
+	<variable name="rp_MauiCounty" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{islandName}.equalsIgnoreCase("Maui")||$F{islandName}.equalsIgnoreCase("Molokai")||$F{islandName}.equalsIgnoreCase("Lanai")?$F{rpNum}:0]]></variableExpression>
+	</variable>
+	<group name="MauiCountyGroup">
+		<groupHeader>
+			<band height="18">
+				<staticText>
+					<reportElement x="0" y="0" width="102" height="18" uuid="d394dec6-750a-40c9-bdff-d120be6bd640"/>
+					<box leftPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[STATEWIDE]]></text>
+				</staticText>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="237" y="0" width="100" height="18" uuid="a5ff38e4-9849-40c0-81ef-97d964c251c9"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rn_Statewide}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="117" y="0" width="105" height="18" uuid="99ee8a19-d0e6-4b04-97ed-71dfa7716e5f"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rr_Statewide}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="652" y="0" width="100" height="18" uuid="96b48d6f-6671-4459-b689-3910c93efedf"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rr_Statewide}+$V{rn_Statewide}+$V{rc_Statewide}+$V{rp_Statewide}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="467" y="0" width="170" height="18" uuid="63aa28ed-86e4-4139-a83e-974a9bf8f2e0"/>
+					<box rightPadding="60"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rp_Statewide}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="352" y="0" width="100" height="18" uuid="9b1d4f0b-7a03-4804-951e-5937cea21374"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rc_Statewide}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="18">
+				<staticText>
+					<reportElement x="0" y="0" width="102" height="18" uuid="f738f829-ca36-454c-b557-df6bcef605f3"/>
+					<box leftPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MAUI COUNTY]]></text>
+				</staticText>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="652" y="0" width="100" height="18" uuid="0d3e0f32-be51-4c7b-abca-e1756a9ea159"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rr_MauiCounty}+$V{rn_MauiCounty}+$V{rc_MauiCounty}+$V{rp_MauiCounty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="467" y="0" width="170" height="18" uuid="5163b01c-3f42-45ab-a707-603628b7a190"/>
+					<box rightPadding="60"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rp_MauiCounty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="117" y="0" width="105" height="18" uuid="a3800962-1c6c-4592-9a52-4cf4b3740693"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rr_MauiCounty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="352" y="0" width="100" height="18" uuid="b37b988c-b528-4104-b2cf-6a2dfae338ab"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rc_MauiCounty}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" pattern="#,##0;(#,##0)">
+					<reportElement x="237" y="0" width="100" height="18" uuid="550f68dd-450e-4ef9-accc-9f36ad43ab3c"/>
+					<box rightPadding="35"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{rn_MauiCounty}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="IslandNameGroup">
+		<groupExpression><![CDATA[$F{islandName}]]></groupExpression>
+	</group>
+	<pageHeader>
+		<band height="81">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="610" y="0" width="141" height="18" uuid="eb755ce1-1d0f-45ee-9419-4b530d555f61">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="610" y="18" width="141" height="18" uuid="3148a52f-f1ca-4252-b103-fcb8694b7c9b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="13a81ade-8839-4f97-94d6-8189bf9743ae">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="4c3296b7-e051-4066-9212-12e040fb6733">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="36" width="390" height="18" uuid="156cdc8c-aa85-4ebd-b7f7-4d21105f68f5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUMBER OF SNAP WORK REGISTRANTS]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="54" width="390" height="18" uuid="7aa2684f-f042-4ec7-92f1-747a8a434e3f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["AS OF "+$P{prdTo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="180" height="18" uuid="40664a84-c8c6-4e85-b11b-0b62aa8afa61">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="180" height="18" uuid="c8703ccd-4450-481a-9a80-4b549ef32197">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="60">
+			<staticText>
+				<reportElement x="117" y="0" width="105" height="60" uuid="9ddee549-03ec-44a2-be54-405f6a48c60d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REQUIRED TO 
+WORK REGISTER
+(RR) 
+----------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="100" height="60" uuid="9fd9716b-11c1-440a-a096-0847227a3b4d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E&T 
+UNAVAILABLE
+(RN)
+--------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="0" width="100" height="60" uuid="ad085680-45f8-4a8d-af93-a1cbab9390b8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RR DECLINES
+OR COMPLETES
+E&T (RC)
+--------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="0" width="170" height="60" uuid="4a9d51b7-2be1-4846-8258-07c24c93fd71"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COUNT OF MANDATORY REGISTERED - REFERRAL PENDING (RP)
+--------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="652" y="0" width="100" height="60" uuid="8231e57c-0073-4bb8-9d8b-063b81f56a50"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL
+--------------------------]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="102" height="18" uuid="1511ba4a-8d7c-4d74-b6de-7bd30f5f0d03"/>
+				<box leftPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{islandName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="652" y="0" width="100" height="18" uuid="ed4236ee-3859-43d3-81d2-ac0f44142136"/>
+				<box rightPadding="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rrNum}+$F{rnNum}+$F{rcNum}+$F{rpNum}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="117" y="0" width="105" height="18" uuid="f435b605-c6ea-42fe-bcfc-fe55338f36f3"/>
+				<box rightPadding="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rrNum}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="467" y="0" width="170" height="18" uuid="bb18a082-aa14-4db8-8b0c-f57d25baa399"/>
+				<box rightPadding="60"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rpNum}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="352" y="0" width="100" height="18" uuid="7af604a1-f973-4d27-90b6-1e6ac3b4e3f4"/>
+				<box rightPadding="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rcNum}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="237" y="0" width="100" height="18" uuid="05572c0f-2748-448c-ab6b-65a9909fb184"/>
+				<box rightPadding="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rnNum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<noData>
+		<band height="155">
+			<textField>
+				<reportElement x="610" y="0" width="142" height="18" uuid="a7615981-fd85-475b-be2e-f08c8c1b932d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="b7adb252-2622-4df0-8e03-2f8d3f2ff825">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="ea23a4ee-18ea-4991-8133-f4653314e249">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="36" width="390" height="18" uuid="8c3c4881-b526-4c87-b71d-1d1060f556c9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUMBER OF SNAP WORK REGISTRANTS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="610" y="18" width="142" height="18" uuid="7718dae0-7475-4a8c-b568-5ec28d694be0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: 1 OF 1"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="180" height="18" uuid="bff4c697-8626-4df2-ac4d-1d34cf1e21bb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="180" height="18" uuid="20eef0cc-d102-40aa-a8f5-7b52401554f3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="137" width="220" height="18" uuid="5181c333-72aa-410f-a71f-93973c241212">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="54" width="390" height="18" uuid="9d0096d9-36d0-460b-be58-d94bb5ae7625">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["AS OF "+$P{prdTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="77" width="105" height="60" uuid="ec9dc132-2591-4d77-99b2-be3f152a8331"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REQUIRED TO 
+WORK REGISTER
+(RR) 
+----------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="77" width="100" height="60" uuid="7319ab71-115e-469e-aceb-bbbf47e7260b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E&T 
+UNAVAILABLE
+(RN)
+--------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="77" width="100" height="60" uuid="829d420a-0ead-4019-8037-428328fff923"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RR DECLINES
+OR COMPLETES
+E&T (RC)
+--------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="77" width="170" height="60" uuid="20aaf7b5-f944-480d-96c2-af1bd1cd483c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COUNT OF MANDATORY
+REGISTERED - REFERRAL
+PENDING (RP)
+--------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="77" width="100" height="60" uuid="ce9db786-0dc0-41e8-8bbb-f784cef7d45f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL
+--------------------------]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

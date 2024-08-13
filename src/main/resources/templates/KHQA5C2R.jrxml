@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KHQA5C2R" pageWidth="1088" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="1048" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="Dataset1" uuid="8ec5a939-c7d6-4f4a-a635-3b3d6e8f4fcf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptMonthTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptYrYYYY" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptMonthNumTxt" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="reportingPeriodTxt" class="java.lang.String"/>
+	<field name="islandCountyName" class="java.lang.String"/>
+	<field name="regCategoryTxt" class="java.lang.String"/>
+	<field name="month1Reg" class="java.lang.Double"/>
+	<field name="month2Reg" class="java.lang.Double"/>
+	<field name="month3Reg" class="java.lang.Double"/>
+	<field name="month4Reg" class="java.lang.Double"/>
+	<field name="month5Reg" class="java.lang.Double"/>
+	<field name="month6Reg" class="java.lang.Double"/>
+	<field name="month7Reg" class="java.lang.Double"/>
+	<field name="month8Reg" class="java.lang.Double"/>
+	<field name="month9Reg" class="java.lang.Double"/>
+	<field name="month10Reg" class="java.lang.Double"/>
+	<field name="month11Reg" class="java.lang.Double"/>
+	<field name="month12Reg" class="java.lang.Double"/>
+	<sortField name="islandCountyName"/>
+	<group name="islandCountyNameGroup" isStartNewPage="true" keepTogether="true">
+		<groupExpression><![CDATA[$F{islandCountyName}]]></groupExpression>
+	</group>
+	<pageHeader>
+		<band height="80">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="896" y="0" width="152" height="18" uuid="eb755ce1-1d0f-45ee-9419-4b530d555f61">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="896" y="18" width="152" height="18" uuid="3148a52f-f1ca-4252-b103-fcb8694b7c9b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="329" y="0" width="390" height="18" uuid="13a81ade-8839-4f97-94d6-8189bf9743ae">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="18" width="390" height="18" uuid="4c3296b7-e051-4066-9212-12e040fb6733">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="36" width="390" height="18" uuid="c186773c-7650-4f8a-9ea1-e139b9deb10d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTHLY SNAP WORK REGISTRATION REPORT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="e21d5c76-cd17-4f9f-bc03-93a969c31cf6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="db4fde10-1647-4985-a606-351b9fc71fe9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="54" width="390" height="18" uuid="83fc231a-4fdc-496d-8d81-856206e860ff">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["FOR "  + $P{rptMonthTxt}.toUpperCase() + " " + $P{rptYrYYYY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="18">
+			<textField>
+				<reportElement x="300" y="0" width="68" height="18" uuid="9249d27a-2a2c-4da1-95eb-ec6ce36b866d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"NOV":"FEB")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="116" y="0" width="116" height="18" uuid="bb3541b8-2b86-48a3-bef3-2f35ceb4d4db">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CATEGORY]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="436" y="0" width="68" height="18" uuid="0c15b78e-aa9e-4f01-9809-679b547b037c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"JAN":"APR")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="68" height="18" uuid="e3b340b1-1c49-4a00-a953-8f82f59d893f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"FEB":"MAY")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="68" height="18" uuid="3da5f5cc-042b-469e-a573-0462fffabf41">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"APR":"JUL")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="572" y="0" width="68" height="18" uuid="1601be68-276e-45ac-b0ed-1c0a2a618bb1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"MAR":"JUN")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="68" height="18" uuid="6fca709d-2a66-4c80-9ec1-2736ece90cdc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"DEC":"MAR")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="708" y="0" width="68" height="18" uuid="f27c6ccd-3b51-47e3-ad91-69d953bbd23b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"MAY":"AUG")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="0" width="68" height="18" uuid="66015af0-94fd-462d-b4e4-27d589290f77">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"OCT":"JAN")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="776" y="0" width="68" height="18" uuid="463588ba-1bd3-47c4-a93f-25e1a4bd5aea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"JUN":"SEP")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="844" y="0" width="68" height="18" uuid="0e7c385f-7a58-40fb-99ca-38932aeafaec">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"JUL":"OCT")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="912" y="0" width="68" height="18" uuid="ed324ca7-416f-4886-9096-1ad80fe6b85f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"AUG":"NOV")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="980" y="0" width="68" height="18" uuid="7a98bbaa-7592-49e7-bad4-e022e363c418">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?"SEP":"DEC")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="116" height="18" uuid="0600655a-b557-4133-933e-260f7766d400">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box bottomPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISLAND/COUNTY]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="116" y="0" width="116" height="18" uuid="51404ba9-55a0-4c38-ad16-e9b9419bde38">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{regCategoryTxt}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="116" y="18" width="116" height="18" uuid="a345fb50-a34d-48ad-9ae2-c90a55018683">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["YEAR TO DATE"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="232" y="0" width="68" height="18" uuid="a9d9124c-ded3-46bd-8aaf-828f9b11606a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month1Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="232" y="18" width="68" height="18" uuid="02bc3815-5801-43aa-8136-be8d16f53470">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=10?$F{month1Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=1?$F{month1Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="300" y="0" width="68" height="18" uuid="ea2c3ccf-8cff-47d9-806b-eb28a933883f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month2Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="300" y="18" width="68" height="18" uuid="1e8b445f-6014-4519-8eab-c15aac5e9300">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=11?$F{month1Reg}+$F{month2Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=2?$F{month1Reg}+$F{month2Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="368" y="0" width="68" height="18" uuid="94974880-1623-4b88-9581-38e1e12f44a0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month3Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="436" y="0" width="68" height="18" uuid="e3d66e67-0d58-4659-bac1-a72154080641">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month4Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="436" y="18" width="68" height="18" uuid="eb3e09ce-3abf-47ba-99bd-845d659b2cd7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=13?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=4?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="368" y="18" width="68" height="18" uuid="ae0db9f3-fa62-4d13-8e24-60d2b6c88d2a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=12?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=3?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="504" y="0" width="68" height="18" uuid="29950dfe-c400-4e6c-9600-17dbfd16bd9d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month5Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="572" y="0" width="68" height="18" uuid="20bd5661-8491-44b1-b2ea-df11ca0460c0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month6Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="572" y="18" width="68" height="18" uuid="3c1ad2a0-a93b-4885-a5ad-150849dd99ff">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=15?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=6?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="504" y="18" width="68" height="18" uuid="df650d56-210f-4e97-9ac1-87186412c51b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=14?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=5?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="844" y="0" width="68" height="18" uuid="0600311c-0e7f-4e44-8979-00dc7435a67d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month10Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="776" y="0" width="68" height="18" uuid="b4135061-05fc-4db7-a1b1-dc0097ad5d96">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month9Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="776" y="18" width="68" height="18" uuid="474cf423-ca38-4ffd-b397-73292aa820a6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=18?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=9?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="912" y="0" width="68" height="18" uuid="aa853368-116a-4f9f-a015-fc2a834d8410">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month11Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="640" y="0" width="68" height="18" uuid="e508683d-28c0-4825-9f63-a26fc6dd463f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month7Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="640" y="18" width="68" height="18" uuid="73d0d0aa-f39a-49dd-922e-4047927749fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=16?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=7?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="912" y="18" width="68" height="18" uuid="6ed35897-1486-4a18-a9b9-ef47c307701d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=20?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}+$F{month10Reg}+$F{month11Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=11?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}+$F{month10Reg}+$F{month11Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="708" y="0" width="68" height="18" uuid="3be1376b-b6a6-4151-af89-860eaa49e4a9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month8Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="844" y="18" width="68" height="18" uuid="d97eec54-1a15-4c25-beaa-1b3ac31bcf0f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=19?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}+$F{month10Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=10?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}+$F{month10Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="708" y="18" width="68" height="18" uuid="d4946f4a-716f-4b9f-a346-a31ca2ba1b2c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=17?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=8?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="980" y="0" width="68" height="18" uuid="ba166958-a59a-42a8-89f2-3bd6df8348c4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month12Reg}]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="980" y="18" width="68" height="18" uuid="4daf3e50-07cd-417d-8ed5-fc166d3a219b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reportingPeriodTxt}.equalsIgnoreCase("FISCAL")?((Integer.parseInt($P{rptMonthNumTxt})>=10?Integer.parseInt($P{rptMonthNumTxt}):(Integer.parseInt($P{rptMonthNumTxt})+12))>=21?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}+$F{month10Reg}+$F{month11Reg}+$F{month12Reg}:0):(Integer.parseInt($P{rptMonthNumTxt})>=12?$F{month1Reg}+$F{month2Reg}+$F{month3Reg}+$F{month4Reg}+$F{month5Reg}+$F{month6Reg}+$F{month7Reg}+$F{month8Reg}+$F{month9Reg}+$F{month10Reg}+$F{month11Reg}+$F{month12Reg}:0)]]></textFieldExpression>
+				<patternExpression><![CDATA[$F{regCategoryTxt}.equalsIgnoreCase("Savings Due to Employment")?"¤#,##0;¤(#,##0)":"#,##0;(#,##0)"]]></patternExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="116" height="18" uuid="04056940-8aaa-4de4-9c91-a5dbf6826590">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{islandCountyName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="18" width="116" height="18" uuid="8c34d96e-cc7a-4158-bbce-afd46294351d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{islandCountyName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<noData>
+		<band height="99">
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="81b4507b-535a-4c7d-a25d-9f18cd9ed8d6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="ee9076e9-6d40-4d59-b06e-9761527b48cb">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="896" y="0" width="152" height="18" uuid="89247678-d327-4a8b-9cf2-d50a0f59bef4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="896" y="18" width="152" height="18" uuid="68514bd4-dd02-4837-a802-e65971faf372">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: 1 OF 1"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="329" y="0" width="390" height="18" uuid="9d170ce3-6304-4e24-9b95-15bf040dcd63">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="18" width="390" height="18" uuid="66a2655a-bc13-4034-ac87-49b30a3ab4f4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="81" width="470" height="18" uuid="a6e77060-6c7f-4622-a894-84b80ef1de66">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="36" width="390" height="18" uuid="3023147a-3152-404b-96a8-26348e42ef32">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTHLY SNAP WORK REGISTRATION REPORT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="329" y="54" width="390" height="18" uuid="931181c1-839f-4640-8a87-79ad4d56b0f1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["FOR "  + $P{rptMonthTxt}.toUpperCase() + " " + $P{rptYrYYYY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

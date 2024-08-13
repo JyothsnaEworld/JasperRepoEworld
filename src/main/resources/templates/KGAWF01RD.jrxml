@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KGAWF01RD" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="8ec5a939-c7d6-4f4a-a635-3b3d6e8f4fcf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptMonthTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptYrYYYY" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptCycleWeek" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="taxIdTxt" class="java.lang.String"/>
+	<field name="lastNameTxt" class="java.lang.String"/>
+	<field name="firstNameTxt" class="java.lang.String"/>
+	<field name="middleInitialTxt" class="java.lang.String"/>
+	<field name="claimNumTxt" class="java.lang.String"/>
+	<field name="errorTypeTxt" class="java.lang.String"/>
+	<field name="paymentDateTxt" class="java.lang.String"/>
+	<field name="traceNumTxt" class="java.lang.String"/>
+	<field name="transAmount" class="java.lang.Double"/>
+	<field name="feesAmount" class="java.lang.Double"/>
+	<field name="addlTraceNumDtlsTxt" class="java.lang.String"/>
+	<field name="transTypeTxt" class="java.lang.String"/>
+	<sortField name="taxIdTxt"/>
+	<sortField name="transTypeTxt"/>
+	<sortField name="traceNumTxt"/>
+	<sortField name="paymentDateYearNum" type="Variable"/>
+	<sortField name="paymentDateMonthNum" type="Variable"/>
+	<sortField name="addlTraceNumDtlsTxt"/>
+	<variable name="TotalRejectionCount" class="java.lang.Double" incrementType="Group" incrementGroup="TraceNumTxtGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.toUpperCase().contains("REJECTION")?1:0]]></variableExpression>
+	</variable>
+	<variable name="TotalIVCount" class="java.lang.Integer" incrementType="Group" incrementGroup="TraceNumTxtGroup" calculation="Sum">
+		<variableExpression><![CDATA[($F{transTypeTxt}.equalsIgnoreCase("OFFSET"))&&($F{errorTypeTxt}.equals("IV"))?1:0]]></variableExpression>
+	</variable>
+	<variable name="TotalHHCount" class="java.lang.Integer" incrementType="Group" incrementGroup="TraceNumTxtGroup" calculation="Sum">
+		<variableExpression><![CDATA[($F{transTypeTxt}.equalsIgnoreCase("OFFSET"))&&($F{errorTypeTxt}.equalsIgnoreCase("HH")) ? 1 : 0]]></variableExpression>
+	</variable>
+	<variable name="TotalAGCount" class="java.lang.Integer" incrementType="Group" incrementGroup="TraceNumTxtGroup" calculation="Sum">
+		<variableExpression><![CDATA[($F{transTypeTxt}.equalsIgnoreCase("OFFSET"))&&($F{errorTypeTxt}.equalsIgnoreCase("AG")) ? 1 : 0]]></variableExpression>
+	</variable>
+	<variable name="prevTransAmount" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{currTransAmount}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="prevFeesAmount" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{currFeesAmount}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="prevTraceNumTxt" class="java.lang.String">
+		<variableExpression><![CDATA[$V{currTraceNumTxt}]]></variableExpression>
+		<initialValueExpression><![CDATA["0"]]></initialValueExpression>
+	</variable>
+	<variable name="currTransAmount" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{transAmount}]]></variableExpression>
+	</variable>
+	<variable name="currFeesAmount" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{feesAmount}]]></variableExpression>
+	</variable>
+	<variable name="currTraceNumTxt" class="java.lang.String">
+		<variableExpression><![CDATA[$F{traceNumTxt}]]></variableExpression>
+	</variable>
+	<variable name="TotalOffsetTransAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.equalsIgnoreCase("OFFSET")?$F{transAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="TotalOffsetFeesAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.equalsIgnoreCase("OFFSET")?($V{currTraceNumTxt}.equals($V{prevTraceNumTxt})?($V{currFeesAmount}-$V{prevFeesAmount}):$F{feesAmount}):0]]></variableExpression>
+	</variable>
+	<variable name="TotalReversalTransAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.equalsIgnoreCase("REVERSAL")?$F{transAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="TotalReversalFeesAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.equalsIgnoreCase("REVERSAL")?($V{currTraceNumTxt}.equals($V{prevTraceNumTxt})?($V{currFeesAmount}-$V{prevFeesAmount}):$F{feesAmount}):0]]></variableExpression>
+	</variable>
+	<variable name="TotalRejectionTransAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.toUpperCase().contains("REJECTION")?$F{transAmount} : 0]]></variableExpression>
+	</variable>
+	<variable name="TotalRejectionFeesAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.toUpperCase().contains("REJECTION")?($V{currTraceNumTxt}.equals($V{prevTraceNumTxt})?($V{currFeesAmount}-$V{prevFeesAmount}):$F{feesAmount}):0]]></variableExpression>
+	</variable>
+	<variable name="GrandIVTransAmountOffset" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[(($F{transTypeTxt}.equalsIgnoreCase("OFFSET"))&&($F{errorTypeTxt}.equalsIgnoreCase("IV")))?$F{transAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="GrandHHTransAmountOffset" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[(($F{transTypeTxt}.equalsIgnoreCase("OFFSET"))&&($F{errorTypeTxt}.equalsIgnoreCase("HH")))?$F{transAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="GrandAGTransAmountOffset" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[(($F{transTypeTxt}.equalsIgnoreCase("OFFSET"))&&($F{errorTypeTxt}.equalsIgnoreCase("AG")))?$F{transAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="GrandIVTransAmountReversal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.equalsIgnoreCase("REVERSAL")&&$F{errorTypeTxt}.equalsIgnoreCase("IV") ? $F{transAmount} : 0]]></variableExpression>
+	</variable>
+	<variable name="GrandHHTransAmountReversal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.equalsIgnoreCase("REVERSAL")&&$F{errorTypeTxt}.equalsIgnoreCase("HH") ? $F{transAmount} : 0]]></variableExpression>
+	</variable>
+	<variable name="GrandAGTransAmountReversal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.equalsIgnoreCase("REVERSAL")&&$F{errorTypeTxt}.equalsIgnoreCase("AG") ? $F{transAmount} : 0]]></variableExpression>
+	</variable>
+	<variable name="GrandIVTransAmountRejection" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.toUpperCase().contains("REJECTION")&&$F{errorTypeTxt}.equalsIgnoreCase("IV") ? $F{transAmount} : 0]]></variableExpression>
+	</variable>
+	<variable name="GrandHHTransAmountRejection" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.toUpperCase().contains("REJECTION")&&$F{errorTypeTxt}.equalsIgnoreCase("HH") ? $F{transAmount} : 0]]></variableExpression>
+	</variable>
+	<variable name="GrandAGTransAmountRejection" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{transTypeTxt}.toUpperCase().contains("REJECTION")&&$F{errorTypeTxt}.equalsIgnoreCase("AG") ? $F{transAmount} : 0]]></variableExpression>
+	</variable>
+	<variable name="paymentDateYearNum" class="java.lang.Integer" resetType="None">
+		<variableExpression><![CDATA[$F{paymentDateTxt}.isEmpty()?0:(Integer.parseInt($F{paymentDateTxt}.substring($F{paymentDateTxt}.length()-4, $F{paymentDateTxt}.length())))]]></variableExpression>
+	</variable>
+	<variable name="paymentDateMonthNum" class="java.lang.Integer" resetType="None">
+		<variableExpression><![CDATA[$F{paymentDateTxt}.isEmpty()?0:(Integer.parseInt($F{paymentDateTxt}.substring(0,2)))]]></variableExpression>
+	</variable>
+	<group name="TraceNumTxtGroup">
+		<groupExpression><![CDATA[$F{traceNumTxt}]]></groupExpression>
+	</group>
+	<pageHeader>
+		<band height="62">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="611" y="0" width="141" height="18" uuid="eb755ce1-1d0f-45ee-9419-4b530d555f61">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="611" y="18" width="141" height="18" uuid="3148a52f-f1ca-4252-b103-fcb8694b7c9b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="389" height="18" uuid="13a81ade-8839-4f97-94d6-8189bf9743ae">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="18" width="389" height="18" uuid="4c3296b7-e051-4066-9212-12e040fb6733">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="36" width="471" height="18" uuid="1fbdaff0-1d03-4e5b-8f7d-639d7c5cc10e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOP SUMMARY FOR CYCLE " + $P{rptYrYYYY} + "/" + ($P{rptCycleWeek}.length()==1?("0"+$P{rptCycleWeek}):$P{rptCycleWeek})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="1bcc8eb1-ed80-476c-9f44-4edcede5ee1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="a0222014-5c9e-4359-b1a3-89aab43ff385">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="418">
+			<textField evaluationTime="Report" pattern="#,##0;(#,##0)" isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="424" y="380" width="155" height="1" uuid="3a7231e0-7860-457e-b7eb-fa525bc64932">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+			</textField>
+			<staticText>
+				<reportElement x="170" y="337" width="250" height="18" uuid="b8e7a6b8-2441-48b4-8e85-e8efa348e34b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[011  -  S  -  XX  -  258  -  K  -  0390  -  8801  (AG)  =]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="361" width="250" height="18" uuid="c16486d7-cec1-4a49-8a2c-bf19fa236e57">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[011  -  S  -  XX  -  258  -  K  -  0390  -  8802  (HH)  =]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="385" width="250" height="18" uuid="dc998262-27b8-4004-82ea-9198616a2f71">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[011  -  S  -  XX  -  258  -  K  -  0390  -  8803  (IV)    =]]></text>
+			</staticText>
+			<textField evaluationTime="Report" pattern="#,##0;(#,##0)" isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="424" y="356" width="155" height="1" uuid="daedd55a-c59f-4d0b-903a-f593570f5441">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+			</textField>
+			<textField evaluationTime="Report" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="424" y="403" width="155" height="1" uuid="3ac1ce87-952a-434b-9bc0-9e95cb766324">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="249" width="80" height="18" uuid="37ef45ea-ff37-427a-b3f5-6b83784f9a34">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandAGTransAmountRejection}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="231" width="80" height="18" uuid="2f4f7ae1-83fc-4787-8356-27214a3742c1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandHHTransAmountRejection}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="213" width="80" height="18" uuid="b8eb9c26-129e-4d00-bca3-398fce21b255">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{GrandIVTransAmountRejection}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="470" y="173" width="80" height="40" uuid="38d55ebc-1ebc-43fc-b438-2cf186adace7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="173" width="90" height="40" uuid="953d56cb-0123-4461-85fc-ec1bcdf3cfd8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COUNT (EXCLUDING REVERSALS)]]></text>
+			</staticText>
+			<textField pattern="#,##0;(#,##0)" isBlankWhenNull="true">
+				<reportElement x="140" y="213" width="90" height="18" uuid="b4433536-dcf4-4f92-828f-fe87894742b7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="32"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalIVCount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)" isBlankWhenNull="true">
+				<reportElement x="140" y="231" width="90" height="18" uuid="fb4b78c3-d507-455f-8956-3f8f3baf1824">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="32"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalHHCount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)" isBlankWhenNull="true">
+				<reportElement x="140" y="249" width="90" height="18" uuid="6c29eff1-b40c-483d-b8dd-a11ee225742b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="32"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalAGCount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="249" width="99" height="18" uuid="a5fb7174-efd7-4b16-a838-0d6e686a9da4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="231" width="99" height="18" uuid="1f865c6e-4d9b-4ab9-8768-ea367a492a77">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="213" width="99" height="18" uuid="1ddee493-bea9-429d-8ac7-c5357be6c153">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="173" width="99" height="40" uuid="70883f9e-2d67-4bdc-b342-2a5f5bdab004">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ERROR TYPE]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="630" y="249" width="80" height="18" uuid="97150df0-b840-4f1a-ad48-bb83a1b81bbd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandAGTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="630" y="231" width="80" height="18" uuid="b146ade5-6c6d-475a-8a84-575930580f2b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandHHTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="630" y="213" width="80" height="18" uuid="2269b58b-fa09-4a85-95f6-3bad8006f334">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{GrandIVTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="630" y="173" width="80" height="40" uuid="ef51d19c-437d-4d32-b607-29dd02808d36">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATE (35%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="173" width="80" height="40" uuid="1f5ff234-8913-4582-b191-bc11082a06f7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FED (65%)]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="271" width="80" height="18" uuid="0b361845-82d5-4225-ae5b-debfe9c293c8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{TotalRejectionTransAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)" isBlankWhenNull="true">
+				<reportElement x="140" y="271" width="90" height="18" uuid="414709d0-2bec-443b-95ed-493700f86db2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="32">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalIVCount}+$V{TotalHHCount}+$V{TotalAGCount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="271" width="99" height="18" uuid="ec4713f1-fd35-4cb1-8132-bdb246af5fb9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL:]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="630" y="271" width="80" height="18" uuid="13e99183-3590-44ff-b776-01cda77d655b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{TotalRejectionTransAmount})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="75" width="80" height="18" uuid="6e8b24ea-aef4-4617-9a4d-2d0fc7498470">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalOffsetFeesAmount}+$V{TotalReversalFeesAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="53" width="80" height="18" uuid="47bad039-a7da-45a9-8048-04546d3f1720">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalReversalFeesAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="35" width="80" height="18" uuid="945790bc-d2d5-48ef-9332-84311d7dd72f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalOffsetFeesAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="13" width="80" height="18" uuid="99fa4e02-c9cc-44f1-9116-c3749ebdc1fe">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FEE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="13" width="90" height="18" uuid="822c2111-025a-4cdf-9f21-4a2008df78ad">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRANS AMOUNT]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="300" y="35" width="90" height="18" uuid="884991dc-181c-41ff-9fc0-5664c50811b8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalOffsetTransAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="300" y="53" width="90" height="18" uuid="862fae3d-47e5-489a-80a4-373352a47647">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalReversalTransAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="300" y="75" width="90" height="18" uuid="8dec1334-0e46-4925-b1ee-185ba2396fe4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalOffsetTransAmount}+$V{TotalReversalTransAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="75" width="100" height="18" uuid="f47278e2-a939-49aa-9dd6-bb786f97d560">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBTOTAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="53" width="100" height="18" uuid="cd1dedce-8508-47e7-aa16-1eec23847b25">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LESS REVERSAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="35" width="100" height="18" uuid="f457dfa5-3c79-42d9-adbd-98cff3faebb6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL OFFSETS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="13" width="100" height="18" uuid="e8326b77-2f77-4ef8-b9a5-cd53efa3dc94">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="13" width="80" height="18" uuid="a243c95c-0fd2-40e5-ab88-61bff32e010b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="35" width="80" height="18" uuid="ac17c619-6da8-42c2-80a9-d8ebef845545">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalOffsetTransAmount}+$V{TotalOffsetFeesAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="53" width="80" height="18" uuid="c8917ba3-27b7-4757-a7f3-2ea6aa0ec58d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalReversalTransAmount}+$V{TotalReversalFeesAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="75" width="80" height="18" uuid="eee682f1-43c9-49a8-9696-f89e5668c833">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{TotalOffsetTransAmount}+$V{TotalOffsetFeesAmount})+($V{TotalReversalTransAmount}+$V{TotalReversalFeesAmount})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="119" width="80" height="18" uuid="f64727c2-ef3e-46e2-9381-3b68e9fdf1c0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalOffsetFeesAmount}+$V{TotalReversalFeesAmount}+$V{TotalRejectionFeesAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="300" y="119" width="90" height="18" uuid="1162321e-d046-4351-9dbc-dd77b2349811">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalOffsetTransAmount}+$V{TotalReversalTransAmount}+$V{TotalRejectionTransAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="119" width="100" height="18" uuid="74e9101b-23d6-42a4-b41f-77d66f6ab7e9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL:]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="119" width="80" height="18" uuid="f169c84c-0c3e-43a6-a038-e3384ece764c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{TotalOffsetTransAmount}+$V{TotalReversalTransAmount}+$V{TotalRejectionTransAmount})+($V{TotalOffsetFeesAmount}+$V{TotalReversalFeesAmount}+$V{TotalRejectionFeesAmount})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="97" width="80" height="18" uuid="710e6ccf-4085-4a49-836d-929dfa61e27c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalRejectionFeesAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="300" y="97" width="90" height="18" uuid="12830307-79cc-4b6d-a980-8bd37f74df0e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalRejectionTransAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="97" width="100" height="18" uuid="01e5db8f-3922-4c21-9591-32f8cddf5e44">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADD REJECT:]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="470" y="97" width="80" height="18" uuid="9aa918b8-b338-451e-b7d8-fb92dcfa97f3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalRejectionTransAmount}+$V{TotalRejectionFeesAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="550" y="213" width="80" height="18" uuid="5a927d89-cf01-4eea-bb53-78e97a9f8e4d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{GrandIVTransAmountRejection})-($V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{GrandIVTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="550" y="231" width="80" height="18" uuid="156192e7-594c-4ad2-a191-b2b292e8306d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandHHTransAmountRejection})-($V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandHHTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="550" y="249" width="80" height="18" uuid="fd722536-3484-466c-917d-ed0196f0c675">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandAGTransAmountRejection})-($V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandAGTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="550" y="271" width="80" height="18" uuid="3fe554c3-9a4c-4f15-ab86-045a6f2c444c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{TotalRejectionTransAmount})-($V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{TotalRejectionTransAmount})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="424" y="337" width="96" height="18" uuid="66f5f1e7-4d51-4bd8-a734-86a94ce4c2f5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandAGTransAmountOffset}+$V{GrandAGTransAmountReversal}+$V{GrandAGTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="424" y="361" width="96" height="18" uuid="65680ead-5104-4d4e-be43-1f5186320829">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandHHTransAmountOffset}+$V{GrandHHTransAmountReversal}+$V{GrandHHTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="424" y="384" width="96" height="18" uuid="a48f5d68-4e81-46bf-8f5d-45c0fed48360">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{GrandIVTransAmountOffset}+$V{GrandIVTransAmountReversal}+$V{GrandIVTransAmountRejection})*0.35]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="41" y="292" width="669" height="18" uuid="e54f530a-d77f-4880-97a8-1b08aa78ad29">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="140" width="350" height="18" uuid="7787d967-73e1-462c-888e-49e1f646ebad">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="173" width="80" height="40" uuid="60bbe847-3894-4972-829e-73084798f091">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REJECTS]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="213" width="80" height="18" uuid="84f331d9-884a-4f57-8961-b3948bc842bc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandIVTransAmountRejection}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="231" width="80" height="18" uuid="7f344dd4-6909-412f-a00e-1058c4d68c55">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandHHTransAmountRejection}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="249" width="80" height="18" uuid="230cc628-263a-4a85-910f-3834d0d01948">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandAGTransAmountRejection}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="390" y="271" width="80" height="18" uuid="0a2ddffd-7ea8-401f-9a2a-03a10fc21cd3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalRejectionTransAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="173" width="80" height="40" uuid="dbe531ed-1be7-4c71-89d7-64231889a795">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REVERSALS]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="310" y="213" width="80" height="18" uuid="5d95cded-a404-483f-8b9b-216c45305a9e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandIVTransAmountReversal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="310" y="231" width="80" height="18" uuid="7e39345e-0c2c-4df8-8c31-9c45bc570645">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandHHTransAmountReversal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="310" y="249" width="80" height="18" uuid="4ba5128a-feef-48ff-82ff-0e76b2b456fb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandAGTransAmountReversal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="310" y="271" width="80" height="18" uuid="39daa9e9-73d3-4b7b-9ad1-3a7871dbae4a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandAGTransAmountReversal}+$V{GrandHHTransAmountReversal}+$V{GrandIVTransAmountReversal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="173" width="80" height="40" uuid="6f67ae36-89cc-482e-a37a-93857554616b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OFFSETS]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="230" y="213" width="80" height="18" uuid="0101dc8d-ee7e-4d23-9e19-2eff8c399349">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandIVTransAmountOffset}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="230" y="231" width="80" height="18" uuid="3e301c74-8aaa-4c8f-934b-5404302af547">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandHHTransAmountOffset}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="230" y="249" width="80" height="18" uuid="7cebc024-6465-43dd-ac2f-9653c7339f19">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandAGTransAmountOffset}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="230" y="271" width="80" height="18" uuid="45139413-7099-496e-b987-1d16676968c4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="4">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GrandAGTransAmountOffset}+$V{GrandHHTransAmountOffset}+$V{GrandIVTransAmountOffset}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="159" y="326" width="430" height="1" uuid="948b3964-c606-4e03-ad33-f24abead3b9a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="159" y="413" width="430" height="1" uuid="f23228fe-6fb2-44a9-8e49-b0506fe4dd84">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="159" y="327" width="1" height="86" uuid="6b29179d-58c5-401f-b5e1-6ab839d38f68"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="589" y="327" width="1" height="86" uuid="73869959-9948-473d-9235-d7cf34c9ff29"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+	<noData>
+		<band height="85">
+			<textField>
+				<reportElement x="611" y="0" width="141" height="18" uuid="6ac9c992-a09a-40a7-aada-fd81d0a06642">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="389" height="18" uuid="b42d3e3e-be68-48d6-88ec-0963d1d032b5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="18" width="389" height="18" uuid="44a55416-2168-42dd-ac86-52b35062839c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="eddc03f5-3ca2-439a-a292-0fbc3b66059e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="567ac6af-0e24-43c2-9a40-ff168db74910">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="67" width="470" height="18" uuid="26078700-4e2c-4acf-b3e0-befbb78c337d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="611" y="18" width="140" height="18" uuid="25168fed-ed80-4bb8-96a0-c07d8bb27ef6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: 1 OF 1"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="36" width="471" height="18" uuid="872d964b-385f-4b61-a97d-ac1c69974f33">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOP SUMMARY FOR CYCLE " + $P{rptYrYYYY} + "/" + ($P{rptCycleWeek}.length()==1?("0"+$P{rptCycleWeek}):$P{rptCycleWeek})]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

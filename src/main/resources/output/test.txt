@@ -1,0 +1,131 @@
+http://localhost:8080/generateReport
+
+{
+  "reportName":"FAPCSSummary",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230803201520"
+}
+
+{
+  "reportName":"SMRFSummary",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230803181520"
+}
+
+{
+  "reportName":"SMRFSummary",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230703181520"
+}
+
+{
+  "reportName":"EBTMCBC",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230803221520"
+}
+
+{
+  "reportName":"TANF30Months",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230803223055"
+}
+
+{
+  "reportName":"KGAMB09R",
+  "reportMonth":"December",
+  "reportYear":2016,
+  "rptYrMonthYYYYMM":"201612",
+  "extractTimeStamp": "20230813161555"
+}
+
+{
+  "reportName":"KGADF02R",
+  "reportMonth":"December",
+  "reportYear":2020,
+  "rptYrMonthYYYYMM":"202012",
+  "extractTimeStamp": "20230814171055"
+}
+
+{
+  "reportName":"KGAQB03R",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230813161555",
+  "periodFrom": "04/01/2019",
+  "periodTo": "06/28/2019"
+}
+
+{
+  "reportName":"KGAQB04R",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230813161555",
+  "periodFrom": "04/01/2019",
+  "periodTo": "06/28/2019"
+}
+
+{
+  "reportName":"KGAMB12R",
+  "reportMonth":"February",
+  "reportYear":2022,
+  "rptYrMonthYYYYMM":"202202",
+  "extractTimeStamp": "20230803221520"
+}
+
+Backfill in Column Header: 36,66,98
+Text in Column Header: 197,216,226
+
+http://localhost:8080/printReport
+
+{
+  "reportName":"PrintApplication",
+  "reportMonth":"September",
+  "reportYear":2023,
+  "rptYrMonthYYYYMM":"202309",
+  "extractTimeStamp": "20230924084500",
+  "caseNumber": "00000011",
+  "householdMembers": [{"name":"White, Carnation\nF  05/15/1985  38y  (73)","householdMembership":"In 05/24/2023","program":"Financial - 05/24/2023\nSNAP - 05/24/2023","maritalStatus":"Married, Involuntary Separation - 07/25/2021","highestEducation":"High School/GED","hdl":"H12345678 - 05/25/2026","citizenship":"U.S. Citizen, Naturalized - 05/25/1985\n\nCountry of birth: United States Minor Outlying Islands","raceAndEthnicity":"Race: American Indian or Alaskan Native\n\nEthnicity: Not Hispanic/Latin American"},
+   {"name":"White, Mimosa\nM  09/28/1982  40y  (75)","householdMembership":"In 05/24/2023","program":"Financial - 05/24/2023\nSNAP Expedited - 05/24/2023","maritalStatus":"","highestEducation":"","hdl":"","citizenship":"Qualified Non-Citizen, Lawful Permanent Resident - 12/25/2021","raceAndEthnicity":"Race: Filipino\n\nEthnicity: Declined to Answer"},
+   {"name":"White, Cyclamen\nM  12/28/2019  3y  (81)","householdMembership":"In 05/24/2023","program":"Financial - 05/24/2023\nSNAP - 05/24/2023","maritalStatus":"","highestEducation":"","hdl":"","citizenship":"U.S. Citizen, Birthright - 12/28/2019","raceAndEthnicity":"Race: American Indian or Alaskan Native\n\nEthnicity: Not Hispanic/Latin American"},
+   {"name":"White, Hyacinth\nM  04/05/1959  64y  (78)","householdMembership":"In 05/24/2023","program":"Financial - 05/24/2023\nSNAP - 05/24/2023","maritalStatus":"","highestEducation":"","hdl":"","citizenship":"Non-Citizen","raceAndEthnicity":"Race: Filipino\nEthnicity: Declined to Answer"},
+   {"name":"Green, Everygreen\nF  04/28/1988  35y (25134)","householdMembership":"In 07/10/2023","program":"","maritalStatus":"","highestEducation":"","hdl":"","citizenship":"Other Non-Citizen, No Permanent Residency Status - 05/25/2020","raceAndEthnicity":"Race: Declined to Answer\n\nEthnicity: Declined to Answer"}],
+  "householdRelationships": [{"name":"White, Carnation\nF  05/15/1985  38y  (73)","startDate":"05/24/2023","endDate":"","relationship":"Primary","relatedIndividual":""},
+  {"name":"White, Mimosa\nM  09/28/1982  40y  (75)","startDate":"05/24/2023","endDate":"","relationship":"Spouse","relatedIndividual":""},
+  {"name":"White, Cyclamen\nM  12/28/2019  3y  (81)","startDate":"05/24/2023","endDate":"","relationship":"Child","relatedIndividual":""},
+  {"name":"","startDate":"05/24/2023","endDate":"","relationship":"is a child of","relatedIndividual":"White, Mimosa\nM  09/28/1982  40y  (75)"},
+  {"name":"White, Hyacinth\nM  04/05/1959  64y  (78)","startDate":"05/24/2023","endDate":"","relationship":"Parent","relatedIndividual":""},
+  {"name":"","startDate":"05/24/2023","endDate":"","relationship":"is a grandparent/great grandparent of","relatedIndividual":"White, Cyclamen\nM  12/28/2019  3y  (81)"},
+  {"name":"Green, Everygreen\nF  04/28/1988  35y (25134)","startDate":"05/24/2023","endDate":"","relationship":"Niece/Nephew","relatedIndividual":""}],
+  "authorizedRepresentative": [{"name":"Yellow, Bougainvillea\nF  05/27/1988  35y  (113)","ssn":"xxx-xx-5273","communicationContact":"Preferred spoken language: English\nPreferred written language: English\n\nMobile (808) 415-4849\n\nSelf service portal: Yes\nNotices: Mail","mailingAddress":"1515 Bishop Street\nSuite 155\nHonolulu, HI 96825\nEffective: 06/19/2023","ebtAddress":"1515 Bishop Street\nSuite 155\nHonolulu, HI 96825\nEffective: 06/19/2023","currentAccess":"Financil - Represents, Receive Correspondence, Access to Benefits"},
+  {"name":"Blue, Cheese\nM  12/23/1981  42y  (1697)","ssn":"xxx-xx-2231","communicationContact":"Preferred spoken language: English\nPreferred written language: English\n\nMobile (808) 425-3388\nBlueCheese@hotmail.com","mailingAddress":"1022 Bishop Street\nSuite 411\nHonolulu, Hi 96825\nEffective: 05/29/2023","ebtAddress":"","currentAccess":"SNAP - Represents"}],
+  "residencyInformation": [{"householdMember":"White, Carnation\nF  05/15/1985  38y  (73)","residenceAddress":"1030 Bishop Street\nSuite 103\nHonolulu, HI 96825\nEffective: 05/24/2023","mailingAddress":"1030 Bishop Street\nSuite 103\nHonolulu, HI 96825\nEffective: 05/24/2023","residency":"Intend to reside or have job commitment - 05/24/2023","outOfHome":""},
+  {"householdMember":"White, Mimosa\nM  09/28/1982  40y  (75)","residenceAddress":"","mailingAddress":"","residency":"Lives with Primary - 05/24/2023","outOfHome":""},
+  {"householdMember":"White, Cyclamen\nM  12/28/2019  3y  (81)","residenceAddress":"","mailingAddress":"","residency":"Lives with Primary - 05/24/2023","outOfHome":""},
+  {"householdMember":"White, Hyacinth\nM  04/05/1959  64y  (78)","residenceAddress":"","mailingAddress":"","residency":"Lives with Primary - 05/24/2023","outOfHome":""},
+  {"householdMember":"Green, Everygreen\nF  04/28/1988  35y (25134)","residenceAddress":"","mailingAddress":"","residency":"Lives with Primary - 07/10/2023","outOfHome":"Work Related - From 07/24/2023 to 08/04/2023\nActual return date: 08/03/2023"}],
+  "communication":[{"caseContactPerson":"White, Carnation (73)\n\nSelf service portal: Yes\nNotices: Mail\n\nConsent received: Yes","residenceAddress":"1030 Bishop Street\nSuite 103\nHonolulu, HI 96813\nEffective: 05/24/2023","mailingAddress":"1031 Bishop Street\nSuite 103\nHonolulu, HI 96813\nEffective: 05/24/2023","ebtAddress":"1032 Bishop Street\nSuite 103\nHonolulu, HI 96813\nEffective: 05/24/2023","limitedEnglishProficiency":"Encountered date: 09/17/2023\nContact type: Telephone\nInterpreter type: Not Related\nEnglish proficiency: Unknown\nPrimary language 1: Japanese\nPrimary language 2: Korean\nPrimary language 3: Cantonese\nNotes: Review English proficiency"}],"communicationContact":[{"type":"Need an interpreter","value":"Yes","contactType":"","contactPerson":"","notes":""},
+{"type":"Preferred spoken language","value":"Other","contactType":"","contactPerson":"","notes":"Other spoken language"},
+{"type":"Preferred written language","value":"Other","contactType":"","contactPerson":"","notes":"Other written language"},
+{"type":"TDD/TTY","value":"(808) 455-3399","contactType":"","contactPerson":"","notes":""},
+{"type":"Special accommodations","value":"Yes","contactType":"","contactPerson":"","notes":"Wheelchair accessibility"},
+{"type":"Best contact number","value":"(808) 415-7788","contactType":"Mobile","contactPerson":"White, Carnation (73)","notes":""},
+{"type":"Alternate contact number","value":"(808) 425-1234","contactType":"Work","contactPerson":"White, Mimosa (75)","notes":""},
+{"type":"Other phones","value":"(808) 422-8836","contactType":"Mobile","contactPerson":"White, Hyacinth (78)","notes":""},
+{"type":"Other phones","value":"(808) 415-2356","contactType":"Mobile","contactPerson":"Green, Everygreen (25134)","notes":""},
+{"type":"Other phones","value":"(808) 433-5689","contactType":"Mobile","contactPerson":"","notes":"Best friend"},
+{"type":"Email","value":"White7788@hotmail.com","contactType":"","contactPerson":"","notes":"Check email after 6pm"}],
+"disqualificationQuestionnaire":[{"questionnaire":"Fleeing a felony warrant, a parole/probation violator","isAnyoneInTheHousehold":"No"},{"questionnaire":"Convicted of receiving SNAP or Financial in multiple states at the same time","isAnyoneInTheHousehold":"No"},{"questionnaire":"Committed an Intentional Program Violation for SNAP or Financial benefits","isAnyoneInTheHousehold":"No"},{"questionnaire":"A convicted drug felon refusing treatment","isAnyoneInTheHousehold":"No"},{"questionnaire":"Convicted of trafficking SNAP for less than $500","isAnyoneInTheHousehold":"No"},{"questionnaire":"Convicted of trafficking SNAP for $500 or more","isAnyoneInTheHousehold":"No"},{"questionnaire":"Convitcted of using SNAP benefits to buy firearms","isAnyoneInTheHousehold":"No"}],
+"disqualification":[{"householdMember":"Green, Everygreen\nF  04/28/1988  35y (25134)","disqualification":"Type: Fleeing Felon or Probation/Parole Violator\nState: Hawaii\nBenefit program: SNAP, FA","status":"Active","effDates":"07/09/2023","minTermDate":"","otherInformation":"Agency name: ABC Agency\nWarrant date: 07/03/2023\nWarrant informed date: 06/03/2023\nConviction date: 03/30/2023\nLocation: Hawaii\nCourt: Local\nINVO contact information: Smith, John"},{"householdMember":"White, Hyacinth\nM  04/05/1959  64y  (78)","disqualification":"Type: Lump Sum\nState: Hawaii\nBenefit progam: FA","status":"Active","effDates":"08/01/2023","minTermDate":"","otherInformation":"Lump sum amount: $5000.00\nOther net income: $1525.00\nSON: $1050.00\nNumber of ineligible months: 3\nFirst ineligible month: 08/2023\nLast ineligible month: 10/2023\nRemainder of LS counted in first future eligible month: $125.00"}],"nonCitizenship":[{"householdMember":"White, Mimosa\nM  09/28/1982  40y  (75)","questions":"Cooperative: Yes\nCompactof Free Association (COFA): No\nNon-Immigrant / Lawfully Present: Yes","effectiveDates":"05/08/2023 - ","type":"Other Non-Citizen","subType":"No Permanent Residency Status"},{"householdMember":"White, Hyacinth\nM  04/05/1959  64y  (78)","questions":"Cooperative: Yes\nCompactof Free Association (COFA): No\nNon-Immigrant / Lawfully Present: No\nUndocumented Immigrant / Other Non-Citizen: No\nLawful Permanent Resident (under age 18): No\nQualified Immigrant: Yes","effectiveDates":"07/04/2023 -","type":"Qualified Non-Citizen","subType":"Haitian refugee"},{"householdMember":"Green, Everygreen\nF  04/28/1988  35y (25134)","questions":"Cooperative: Yes\nCompactof Free Association (COFA): Yes\n","effectiveDates":"05/23/2023 -","type":"Lawfully Present","subType":"COFA (Unspecified)"}],
+"sponsor":[{"sponsorDetails":"Yellow, Bougainvillea \nMarried, Living With Spouse\nSpouse: Yamaguchi, Robert J\n\nSpouse of the sponsor has signed a sponship affidavit\n\n1 non-citizens sponsored\n2 tax dependents","effectiveDates":"02/01/2019 -\n\n","incomeExpenseAsset":"Earned income: $5500.00\n\nChild support amount: $550.00\n\nTotal asset value: $1585.00\n","communicationContact":"Preferred spoken language: English\nPreferred written language: English\n\nMobile (808) 422-3355\nNot available after 6pm\n","residenceAddress":"1015 Bishop Street\nSuite 215\nHonolulu, HI 96825\nEffective: 05/25/2023","mailingAddress":"1015 Bishop Street\nSuite 215\nHonolulu, HI 96825\nEffective: 05/25/2023"}]

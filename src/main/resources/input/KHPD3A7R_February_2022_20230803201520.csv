@@ -1,0 +1,30 @@
+SNAP,6295,1542,1432,526,902,188,0,Person
+SNAP,2048,521,416,166,295,56,0,Adult
+SNAP,4247,1021,1016,360,607,132,0,Child
+AA,114,12,11,4,11,1,0,Person
+AA,114,12,11,4,11,1,0,Adult
+AA,0,0,0,0,0,0,0,Child
+AB,2,2,1,0,0,0,0,Person
+AB,2,2,1,0,0,0,0,Adult
+AB,0,0,0,0,0,0,0,Child
+AD,46,3,5,1,4,0,0,Person
+AD,46,3,5,1,4,0,0,Adult
+AD,0,0,0,0,0,0,0,Child
+GA,2730,403,451,152,177,49,0,Person
+GA,2730,403,451,152,177,49,0,Adult
+GA,0,0,0,0,0,0,0,Child
+Domiciliary Care,120,20,35,46,18,3,0,Person
+Domiciliary Care,120,20,35,46,18,3,0,Adult
+Domiciliary Care,0,0,0,0,0,0,0,Child
+Refugee,53,20,16,51,14,3,0,Person
+Refugee,50,19,16,46,12,3,0,Adult
+Refugee,3,1,0,5,2,0,0,Child
+Repatriate,2,0,1,0,1,0,0,Person
+Repatriate,2,0,1,0,1,0,0,Adult
+Repatriate,0,0,0,0,0,0,0,Child
+TANF,6295,1542,1432,526,902,188,0,Person
+TANF,2048,521,416,166,295,56,0,Adult
+TANF,4247,1021,1016,360,607,132,0,Child
+TAONF,1406,372,33,13,1939,,,Person
+TAONF,815,143,12,21,62,6,0,Adult
+TAONF,1211,168,160,47,90,7,0,Child

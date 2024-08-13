@@ -1,0 +1,22 @@
+1,Work Registrant Required to Work Register (RR Codes) With:,1,Individual is an ABAWD\, NOT Exempt from 3-month time limit. ("Y" Indicator),172
+1,Work Registrant Required to Work Register (RR Codes) With:,2,ABAWD fulfilling work/training requirements. Exempt from 3-month time limit. ("J" Indicator),40
+1,Work Registrant Required to Work Register (RR Codes) With:,3,ABAWD resides in a waived area. Exempt from 3-month time limit. ("W" Indicator),12124
+1,Work Registrant Required to Work Register (RR Codes) With:,4,ABAWD - 8% Discretionary Exemption. Exempt from 3-month time limit. ("F" Indicator),3
+1,Work Registrant Required to Work Register (RR Codes) With:,5,Veteran. ("N" Indicator),5
+1,Work Registrant Required to Work Register (RR Codes) With:,6,Living in a household where a household member is under age 18. ("N" Indicator),20
+1,Work Registrant Required to Work Register (RR Codes) With:,7,Experiencing homelessness. ("N" Indicator),57
+1,Work Registrant Required to Work Register (RR Codes) With:,8,Pregnant. ("N" Indicator),35
+1,Work Registrant Required to Work Register (RR Codes) With:,9,Younger than age 18 or age 53+. ("N" Indicator),125
+1,Work Registrant Required to Work Register (RR Codes) With:,10,Experiencing physical or mental barriers to work. ("N" Indicator),15
+1,Work Registrant Required to Work Register (RR Codes) With:,11,Age 24 or younger and in foster care on 18th birthday. ("N" Indicator),45
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,1,Individual is an ABAWD\, NOT Exempt from 3-month time limit. ("Y" Indicator),3
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,2,ABAWD fulfilling work/training requirements. Exempt from 3-month time limit. ("J" Indicator),39
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,3,ABAWD resides in a waived area. Exempt from 3-month time limit. ("W" Indicator),32
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,4,ABAWD - 8% Discretionary Exemption. Exempt from 3-month time limit. ("F" Indicator),3
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,5,Veteran. ("N" Indicator),8
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,6,Living in a household where a household member is under age 18. ("N" Indicator),12
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,7,Experiencing homelessness. ("N" Indicator),9
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,8,Pregnant. ("N" Indicator),5
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,9,Younger than age 18 or age 53+. ("N" Indicator),13
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,10,Experiencing physical or mental barriers to work. ("N" Indicator),3
+2,Exempt Work Registrant Volunteers to Participate in E&T (RV Codes) With:,11,Age 24 or younger and in foster care on 18th birthday. ("N" Indicator),10

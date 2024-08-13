@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MCQReport" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CG" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CT" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CG" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CT" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prdFrom" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prdTo" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fiscalYear" class="java.lang.String"/>
+	<field name="stateName" class="java.lang.String"/>
+	<field name="subStateArea" class="java.lang.String"/>
+	<field name="stateContactLastNameTxt" class="java.lang.String"/>
+	<field name="stateContactFirstNameTxt" class="java.lang.String"/>
+	<field name="stateContactMiddleInitialTxt" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="telephoneNumber" class="java.lang.String"/>
+	<field name="dateChangeImplemented" class="java.lang.String"/>
+	<field name="monthNum" class="java.lang.Integer"/>
+	<field name="month" class="java.lang.String"/>
+	<field name="dataElementMainNum" class="java.lang.String"/>
+	<field name="dataElementsMainGroup" class="java.lang.String"/>
+	<field name="dataElementsSubGrpNum" class="java.lang.String"/>
+	<field name="dataElementsSubGroup" class="java.lang.String"/>
+	<field name="hhTypeNum" class="java.lang.String"/>
+	<field name="hhTypeName" class="java.lang.String"/>
+	<field name="monthData" class="java.lang.Integer"/>
+	<sortField name="monthNum"/>
+	<sortField name="dataElementMainNum"/>
+	<sortField name="dataElementsSubGrpNum"/>
+	<sortField name="hhTypeNum"/>
+	<pageHeader>
+		<band height="80">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="180" y="36" width="390" height="18" uuid="a6d28d4d-f8bb-489f-af50-3e84f99ce1c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAJOR CHANGES QUARTERLY REPORTING TEMPLATE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="610" y="0" width="142" height="18" uuid="c4610e0c-115c-45a3-8f72-394410826cdc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="610" y="18" width="142" height="18" uuid="7a29c6c3-bde4-4018-82cc-1bc8e8a52bf9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="0b20bc15-a3a6-43ed-9d56-4a67b16963d6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="26569ea3-bb36-42cd-a0c5-94a3f59b5cf2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="ed54d942-dd92-4ca5-b0ac-60d014b3e862">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="03cca612-cdab-48a1-a6fa-f7e7dc3ad74a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="54" width="390" height="18" uuid="9669de3e-47e4-4219-a50e-8661da86be34">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["FOR PERIOD: "+$P{prdFrom}+" TO "+$P{prdTo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="210">
+			<crosstab>
+				<reportElement x="0" y="145" width="450" height="65" uuid="d360a79f-6e53-4cf9-a7e0-ecd348168d67">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab 2_CH"/>
+					<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab 2_CG"/>
+					<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab 2_CT"/>
+					<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab 2_CD"/>
+				</reportElement>
+				<crosstabHeaderCell>
+					<cellContents mode="Opaque" style="Crosstab 2_CD">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						<staticText>
+							<reportElement style="Crosstab_CD" mode="Opaque" x="0" y="0" width="140" height="40" uuid="5f772987-d983-4b71-acf9-67725f0418e5">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							</reportElement>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="ArialFontFamily" size="10" isBold="true"/>
+							</textElement>
+							<text><![CDATA[DATA ELEMENTS]]></text>
+						</staticText>
+						<staticText>
+							<reportElement positionType="Float" stretchType="ContainerHeight" x="140" y="0" width="110" height="40" uuid="4b937ffb-ccda-4b57-9339-b430a50b2ee3"/>
+							<box>
+								<pen lineColor="rgba(0, 0, 0, 0.74509805)"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="ArialFontFamily" size="10" isBold="true"/>
+							</textElement>
+							<text><![CDATA[HOUSEHOLD ("HH") TYPE]]></text>
+						</staticText>
+					</cellContents>
+				</crosstabHeaderCell>
+				<rowGroup name="dataElementsMainGroup" width="0">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{dataElementMainNum}.toUpperCase()]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH"/>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CG">
+							<staticText>
+								<reportElement x="0" y="0" width="260" height="20" uuid="0e5f4e72-965c-4b9c-a906-6b7be13955ad"/>
+								<text><![CDATA[Total dataElementsMainGroup]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="dataElementMainNum" width="60" headerPosition="Stretch">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{dataElementsMainGroup}.toUpperCase()]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="ContainerHeight" x="0" y="0" width="60" height="20" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="9bb5835e-4ceb-45cf-a65c-779f852ecde0"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+									<font fontName="ArialFontFamily" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{dataElementMainNum}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" forecolor="#FFFFFF" uuid="f09761c0-4370-4e43-acdb-daea987135ed"/>
+								<text><![CDATA[Total dataElementMainNum]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="dataElementsSubGrpNum" width="0">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{dataElementsSubGrpNum}.toUpperCase()]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH"/>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CG">
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="e807e0a6-00d2-42da-9b7e-a645c6856430"/>
+								<text><![CDATA[Total dataElementsSubGroup]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="dataElementsSubGroup" width="80">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{dataElementsSubGroup}.toUpperCase()]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH">
+							<textField textAdjust="StretchHeight">
+								<reportElement style="Crosstab 1_CD" positionType="Float" stretchType="ContainerHeight" mode="Opaque" x="0" y="0" width="80" height="20" isPrintInFirstWholeBand="true" uuid="9cea771d-7c94-4ede-8195-4615c8ae7a5e"/>
+								<box topPadding="2" leftPadding="4" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{dataElementsSubGroup}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CG">
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="a87c0954-ade1-4190-b891-6ab847a842c4"/>
+								<text><![CDATA[Total dataElementsSubGrpNum]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="hhTypeName" width="0">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{hhTypeNum}.toUpperCase()]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH"/>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CG">
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="4d7aa0cf-40ea-4332-af69-94a7d86364da"/>
+								<text><![CDATA[Total hhTypeName]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="hhTypeNum" width="110">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{hhTypeName}.toUpperCase()]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="ContainerHeight" x="0" y="0" width="110" height="20" uuid="e52928c7-4b84-4b95-bbfd-00ee618ecd1c"/>
+								<box topPadding="2" leftPadding="4" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{hhTypeNum}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CG">
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="1eb99cf7-8a8c-44d3-a92d-67008f2e6f07"/>
+								<text><![CDATA[Total hhTypeNum]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="month" height="20" headerPosition="Center">
+					<bucket order="None" class="java.lang.String">
+						<bucketExpression><![CDATA["MONTH"]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH">
+							<staticText>
+								<reportElement positionType="Float" x="0" y="0" width="60" height="20" uuid="74eebcf6-6ded-494d-8f87-8770b304c694"/>
+								<box>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[MONTH]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CG">
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="0bffcd93-c202-460c-8ed8-b96bd794b4a0"/>
+								<text><![CDATA[Total month]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="monthNum" height="20">
+					<bucket order="None" class="java.lang.String">
+						<bucketExpression><![CDATA[$F{month}.toUpperCase()]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab 2_CH">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="60" height="20" uuid="98cb278d-6451-4142-8b7c-2ab6fd779385"/>
+								<box>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="ArialFontFamily" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{monthNum}.toUpperCase()]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" forecolor="#FFFFFF" uuid="31ab0ea3-3dd5-4549-9dc6-212d833fd876"/>
+								<text><![CDATA[Total monthNum]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="monthData_MEASURE" class="java.lang.Integer">
+					<measureExpression><![CDATA[$F{monthData}]]></measureExpression>
+				</measure>
+				<crosstabCell width="60" height="20">
+					<cellContents mode="Opaque" style="Crosstab 2_CD">
+						<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+							<reportElement positionType="Float" stretchType="ContainerHeight" x="0" y="0" width="60" height="20" uuid="fd751460-657b-4214-8db5-ab5a945d1d6d"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="ArialFontFamily" size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" columnTotalGroup="monthNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="c47113be-9d4b-4d1d-a31d-f9853de72ca0"/>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementMainNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="9aa26110-183d-4263-aed4-2b87664370ff"/>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementMainNum" columnTotalGroup="monthNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="cefc1718-6c9f-41a0-8f4e-bf7b573d2c2b"/>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsSubGrpNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" uuid="0332a3c6-1607-48a2-ab7c-c9efd9155cfc"/>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsSubGrpNum" columnTotalGroup="monthNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="3f49fa49-0a7d-4dba-a9e6-31631456f23d"/>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="hhTypeNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" uuid="c79cd4c1-a461-4127-8f95-574cd8475952"/>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="hhTypeNum" columnTotalGroup="monthNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="ec56cc21-bd42-425b-8b51-8b35738b1ff4"/>
+							<textFieldExpression><![CDATA[$V{monthData_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" columnTotalGroup="month">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementMainNum" columnTotalGroup="month">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsSubGrpNum" columnTotalGroup="month">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="hhTypeNum" columnTotalGroup="month">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsSubGroup">
+					<cellContents mode="Opaque" style="Crosstab 2_CG"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsSubGroup" columnTotalGroup="month">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsSubGroup" columnTotalGroup="monthNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="hhTypeName">
+					<cellContents mode="Opaque" style="Crosstab 2_CG"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="hhTypeName" columnTotalGroup="month">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="hhTypeName" columnTotalGroup="monthNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CG"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsMainGroup">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsMainGroup" columnTotalGroup="month">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="dataElementsMainGroup" columnTotalGroup="monthNum">
+					<cellContents mode="Opaque" style="Crosstab 2_CT"/>
+				</crosstabCell>
+			</crosstab>
+			<textField>
+				<reportElement x="0" y="0" width="752" height="18" uuid="130d6fea-8f5d-4bc7-81db-28271a885f5b"/>
+				<box leftPadding="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["FISCAL YEAR: "+ $F{fiscalYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="752" height="18" uuid="10718698-4ecd-462c-ab65-7da2d44aa4b4"/>
+				<box leftPadding="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["STATE NAME: "+ $F{stateName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="36" width="752" height="18" uuid="caa601fb-a706-457a-9f59-dc751c0de7d4"/>
+				<box leftPadding="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SUB-STATE AREA COVERED (IF ANY): "+ $F{subStateArea}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="54" width="752" height="18" uuid="6213d5b1-1bd1-408a-b334-572f76f7a12e"/>
+				<box leftPadding="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["STATE CONTACT PERSON: "+ $F{stateContactLastNameTxt}+($F{stateContactLastNameTxt}.isEmpty()?$F{stateContactFirstNameTxt}:($F{stateContactFirstNameTxt}.isEmpty()?"":(", "+$F{stateContactFirstNameTxt})))+($F{stateContactLastNameTxt}.isEmpty()?($F{stateContactFirstNameTxt}.isEmpty()?$F{stateContactMiddleInitialTxt}:($F{stateContactMiddleInitialTxt}.isEmpty()?"":(" "+$F{stateContactMiddleInitialTxt}))):$F{stateContactFirstNameTxt}.isEmpty()?", "+$F{stateContactMiddleInitialTxt}:(" "+$F{stateContactMiddleInitialTxt}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="72" width="752" height="18" uuid="86f6c3b3-db70-491c-a948-fec9a663c7bf"/>
+				<box leftPadding="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONTACT PERSON'S E-MAIL ADDRESS: "+ $F{email}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="90" width="752" height="18" uuid="c685aa29-6fb1-481d-81e7-f7eb1a8cf389"/>
+				<box leftPadding="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONTACT PERSON'S TELEPHONE NUMBER: "+ $F{telephoneNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="108" width="752" height="18" uuid="202ce4de-c9b1-4cfd-9d78-807db5e12844"/>
+				<box leftPadding="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DATE MAJOR CHANGE IMPLEMENTED: "+ $F{dateChangeImplemented}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+	<noData>
+		<band height="100">
+			<staticText>
+				<reportElement x="180" y="36" width="390" height="18" uuid="50445e45-a89f-4f41-b752-107fc20cdaa2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAJOR CHANGES QUARTERLY REPORTING TEMPLATE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="610" y="0" width="142" height="18" uuid="afcfa64c-a44c-441d-b636-7055ef1cbf74">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="c3abd90a-e214-4384-a028-ef60bbf1a010">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="57ba7fc0-3a6e-4d4e-a05c-2eef5f230010">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="fbf8e02f-ad55-46e9-ba7f-9d411a797d1e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="f96a7b28-7bff-46b3-9cd8-6a357e0a1063">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="82" width="470" height="18" uuid="2ad69fb6-95a7-43c0-828c-5bc0220ce656">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="610" y="18" width="142" height="18" uuid="4055a828-d9b8-4f0f-baa9-93341998f28d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: 1 OF 1"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="54" width="390" height="18" uuid="35b375f5-baf8-4c89-b39b-dcc4c5ae04aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["FOR PERIOD: "+$P{prdFrom}+" TO "+$P{prdTo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

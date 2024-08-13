@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IncomePaySR" pageWidth="572" pageHeight="842" columnWidth="572" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2ff13258-8098-4bae-baa5-93fec31e22f8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#244262">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="IncomePayDataSet" uuid="bd90f184-994a-4877-a33c-2a734defac54">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="incomePayDetailsdataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset>
+	<subDataset name="IncomePayDetailsDataSet" uuid="fd630cbb-a27c-4537-ada6-351182c58128">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="incomeWagesAndPaydataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<field name="wagesInformationdataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<field name="payStubDocumentationdataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset>
+	<subDataset name="IncomeWagesAndPayDataSet" uuid="e8b06f4c-cc7c-45b1-b335-b5caaa894dab">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="householdMemberTxt" class="java.lang.String"/>
+		<field name="effectiveDatesTxt" class="java.lang.String"/>
+		<field name="incomeTypeAndSubtypeTxt" class="java.lang.String"/>
+		<field name="countedDesignationTxt" class="java.lang.String"/>
+		<field name="employerTxt" class="java.lang.String"/>
+		<field name="employmentTxt" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="WagesInformationDataSet" uuid="bae07af6-b3ee-4396-baef-5adef2524d63">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="effectiveDatesTxt" class="java.lang.String"/>
+		<field name="frequencyAndMonthlyHoursTxt" class="java.lang.String"/>
+		<field name="rateAndFrequencyTxt" class="java.lang.String"/>
+		<field name="hoursWorkedTxt" class="java.lang.String"/>
+		<field name="calculatedMonthlyTxt" class="java.lang.String"/>
+		<field name="grossIncomeMonthlyTxt" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="PayStubDocumentationDataSet" uuid="5cc17a3c-4384-4d7d-998e-8eedece1bb44">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="datePaidTxt" class="java.lang.String"/>
+		<field name="payPeriodEndDateTxt" class="java.lang.String"/>
+		<field name="grossWagesTxt" class="java.lang.String"/>
+		<field name="hoursWorkedTxt" class="java.lang.String"/>
+		<field name="tipsTxt" class="java.lang.String"/>
+		<field name="grossWagesYTDTxt" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="incomePayDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<group name="IncomePayGroup" keepTogether="true">
+		<groupHeader>
+			<band height="90">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<componentElement>
+					<reportElement positionType="Float" x="0" y="0" width="572" height="90" isRemoveLineWhenBlank="true" uuid="12066616-7c1b-4d32-8228-28017e57af7a">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+						<datasetRun subDataset="IncomePayDataSet" uuid="16128565-f13a-4d9f-a1ee-34424b1ef427">
+							<dataSourceExpression><![CDATA[$F{incomePayDataSource}]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="90" width="572">
+							<componentElement>
+								<reportElement positionType="Float" x="0" y="0" width="572" height="90" isRemoveLineWhenBlank="true" uuid="7ce0b987-425d-4021-8e81-1662b808dcb7">
+									<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</reportElement>
+								<jr:list printOrder="Vertical">
+									<datasetRun subDataset="IncomePayDetailsDataSet" uuid="4e1a87d7-6553-4c18-9a97-1fb009a7d895">
+										<datasetParameter name="REPORT_DATA_SOURCE">
+											<datasetParameterExpression><![CDATA[$F{incomePayDetailsdataSource}]]></datasetParameterExpression>
+										</datasetParameter>
+										<dataSourceExpression><![CDATA[$P{REPORT_CONNECTION}]]></dataSourceExpression>
+									</datasetRun>
+									<jr:listContents height="90" width="572">
+										<componentElement>
+											<reportElement positionType="Float" x="0" y="0" width="572" height="29" isRemoveLineWhenBlank="true" uuid="7a1d6653-07ab-44ba-960c-76e15ffbd954">
+												<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+												<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+												<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+												<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+												<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+												<property name="com.jaspersoft.studio.unit.height" value="px"/>
+											</reportElement>
+											<jr:table whenNoDataType="Blank">
+												<datasetRun subDataset="IncomeWagesAndPayDataSet" uuid="46a3a7ca-d856-4136-8062-fe7b01566b77">
+													<datasetParameter name="REPORT_DATA_SOURCE">
+														<datasetParameterExpression><![CDATA[$F{incomeWagesAndPaydataSource}]]></datasetParameterExpression>
+													</datasetParameter>
+													<dataSourceExpression><![CDATA[$P{REPORT_CONNECTION}]]></dataSourceExpression>
+												</datasetRun>
+												<jr:column width="112" uuid="7ec2a726-b338-4639-b8fc-96576b17a84e">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+													<jr:tableHeader style="Table_TH" height="20" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<box>
+															<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+														</box>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="112" height="20" isRemoveLineWhenBlank="true" uuid="f8da3650-845c-455a-9144-6298ab59db11"/>
+															<box>
+																<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															</box>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily"/>
+															</textElement>
+															<text><![CDATA[Income - Wages & Pay]]></text>
+														</staticText>
+													</jr:tableHeader>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="112" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="35d71092-fd58-4999-a3d8-6f5c5b4c0589"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Household Member]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="112" height="30" isRemoveLineWhenBlank="true" uuid="c1147973-b6cf-4aa8-83e2-ef7fad8a73f8"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{householdMemberTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="100" uuid="98c6d2b0-6a2b-4d65-89b4-4b0be95f493a">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="b3b29b52-e061-4cdb-a39d-14ccc5e0cae8"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Eff. Dates]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="65db0568-0fa1-4dde-ad20-9e54700c2bd7"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{effectiveDatesTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="90" uuid="13e484db-5153-4cc2-ad1b-660a747bcab7">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<property name="com.jaspersoft.studio.unit.width" value="px"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="66d089a8-abea-4e26-9c2d-afe190944081">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Income Type 
+And Subtype]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" uuid="86a1ab61-b112-4718-b859-ecf52630cf79">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{incomeTypeAndSubtypeTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="90" uuid="6f02b954-e089-4f68-b74d-7f87afe194af">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<property name="com.jaspersoft.studio.unit.width" value="px"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="628e35f0-e845-45a7-9947-c0b7eb2914f8">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Counted/
+Designation]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" uuid="491d9c50-e4a2-454d-b8be-71dd57a05385">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{countedDesignationTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="90" uuid="341303d1-46bf-4387-81b8-18ae763ee9ad">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="2a850d12-5e2b-4238-8829-0bedf04b1ec0">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Employer]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" uuid="90c28751-6cc9-47b9-aef6-c9ae08ba2732">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{employerTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="90" uuid="08414cda-5ba5-40d4-839f-7c7481e62dad">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="2b965085-d0f8-46cb-9cf5-24222a4a9ab7">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Employment]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30" isRemoveLineWhenBlank="true" uuid="f08ed9ab-c22b-46ba-881a-e0be52a72452">
+																<property name="com.jaspersoft.studio.unit.width" value="px"/>
+															</reportElement>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{employmentTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+											</jr:table>
+										</componentElement>
+										<componentElement>
+											<reportElement positionType="Float" x="0" y="30" width="572" height="29" isRemoveLineWhenBlank="true" uuid="eb6017d9-492e-4a9a-a7e6-cfcc40519e65">
+												<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+												<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+												<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+												<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+												<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+												<property name="com.jaspersoft.studio.unit.height" value="px"/>
+											</reportElement>
+											<jr:table whenNoDataType="Blank">
+												<datasetRun subDataset="WagesInformationDataSet" uuid="650a900e-0970-4a3e-bc62-b58ca0a5a39c">
+													<datasetParameter name="REPORT_DATA_SOURCE">
+														<datasetParameterExpression><![CDATA[$F{wagesInformationdataSource}]]></datasetParameterExpression>
+													</datasetParameter>
+													<dataSourceExpression><![CDATA[$P{REPORT_CONNECTION}]]></dataSourceExpression>
+												</datasetRun>
+												<jr:column width="112" uuid="ea9a9f7b-860a-4f21-a517-d1b6c467f770">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+													<jr:tableHeader style="Table_TH" height="20" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<box>
+															<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+														</box>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="112" height="20" isRemoveLineWhenBlank="true" uuid="7c9015c8-0fd1-4d64-83a5-7ea43755def4"/>
+															<box>
+																<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															</box>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily"/>
+															</textElement>
+															<text><![CDATA[Wages Information]]></text>
+														</staticText>
+													</jr:tableHeader>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="112" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="77ff8c65-baf0-48bf-9898-651a5d041ea6"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Eff. Dates]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="112" height="30" isRemoveLineWhenBlank="true" uuid="9b2f46e5-70cb-4e88-88eb-ed09bb303210"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{effectiveDatesTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="100" uuid="27033aa2-6ea1-4fc1-8544-ba1154485348">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="d19443d8-e9f8-4eaa-bfb3-aea9d347d066"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Frequency And Monthly Hours]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="97ffce29-889a-42f3-a180-721162972e6d"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{frequencyAndMonthlyHoursTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="80" uuid="e3552d2d-c6e4-4ca1-9351-4e89c2402a84">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="070a8988-6b59-43f3-9018-38f8273dbf33"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Rate And Frequency]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" uuid="28e7a838-1c98-4d03-832d-39b37c155846"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{rateAndFrequencyTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="80" uuid="7fa8cd4a-c9cf-4ff0-9e87-21d70c3614ee">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="5902147a-6db7-473e-8a49-ce5fac4320c4"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Hours Worked]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" uuid="a1c47124-284f-479c-95fa-dca84fedbc72"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{hoursWorkedTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="100" uuid="89f13dce-8f26-48f5-bf80-7d17d919fc60">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="66d4e9c6-ea7e-4e1a-a7ed-1ac1b3488bd4"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Calculated Monthly]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="2d2a74dd-32ac-4005-bfd5-71d22b8ec865"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{calculatedMonthlyTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="100" uuid="83040a37-264d-41ee-b889-364a696fa709">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="bea5f584-335c-442d-8032-4abc7e8d8e39"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Gross Income Monthly]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="af5d33a1-5725-41f9-8603-7bec7b94e7c9"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{grossIncomeMonthlyTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+											</jr:table>
+										</componentElement>
+										<componentElement>
+											<reportElement positionType="Float" x="0" y="60" width="572" height="29" isRemoveLineWhenBlank="true" uuid="d25b509c-d8bc-4abd-8cdd-97acfea5b583">
+												<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+												<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+												<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+												<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+												<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+												<property name="com.jaspersoft.studio.unit.height" value="px"/>
+											</reportElement>
+											<jr:table whenNoDataType="Blank">
+												<datasetRun subDataset="PayStubDocumentationDataSet" uuid="0a94dfee-7def-4861-ae19-77e13d538812">
+													<datasetParameter name="REPORT_DATA_SOURCE">
+														<datasetParameterExpression><![CDATA[$F{payStubDocumentationdataSource}]]></datasetParameterExpression>
+													</datasetParameter>
+													<dataSourceExpression><![CDATA[$P{REPORT_CONNECTION}]]></dataSourceExpression>
+												</datasetRun>
+												<jr:column width="112" uuid="2af933ef-a6e5-4ef6-909e-6421376c8e6e">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+													<jr:tableHeader style="Table_TH" height="20" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<box>
+															<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+														</box>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="112" height="20" isRemoveLineWhenBlank="true" uuid="9e3f9d0f-4ccb-49b6-8e4c-91a05605b36f">
+																<property name="com.jaspersoft.studio.unit.height" value="px"/>
+															</reportElement>
+															<box>
+																<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+																<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+															</box>
+															<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily"/>
+															</textElement>
+															<text><![CDATA[Pay Stub Documentation]]></text>
+														</staticText>
+													</jr:tableHeader>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="112" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="9ceea563-8b91-4459-8d89-4933322b12b6"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Date Paid]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="112" height="30" isRemoveLineWhenBlank="true" uuid="2d9d7a83-c199-4ef7-8159-b2bf4a10a276"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{datePaidTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="100" uuid="c5dcd12f-5f91-4fdf-835a-d0465bea0ee1">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="7af4a7b0-f050-48c6-a987-ae37851f92e0"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Pay Period 
+End Date]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="1f84170a-33c1-4891-ac4a-16b73b6934a2"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{payPeriodEndDateTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="80" uuid="a99f6cb9-c055-4f0d-a276-a1e8f1eb4db6">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="f0cbc57c-1b7c-4f32-abab-3ec91116b3ec"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Gross Wages]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" uuid="e8d1b124-f2dc-4bba-9bd1-5257c9a20f06"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{grossWagesTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="80" uuid="cd6c62d2-17ce-472d-9fce-dfc0ef0118b8">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="1f57d998-bd32-47fa-bc8b-46f258faad53"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Hours Worked]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="30" isRemoveLineWhenBlank="true" uuid="7f6b4de6-7498-46a2-94b2-7269ec342f3e"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{hoursWorkedTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="100" uuid="7b26eb18-e96e-499d-836e-8069b08d0d60">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="fe0507d1-5830-4460-b1b6-4772eeba8916"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Tips]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="c081ed12-a70a-4e24-a4d4-d517fb6d01e8"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{tipsTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+												<jr:column width="100" uuid="af981e39-9ef7-481d-bd96-4908421708c7">
+													<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+													<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+													<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<staticText>
+															<reportElement positionType="Float" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" forecolor="#C5D8E2" uuid="9250a2bb-3e07-4480-921c-76fbf22d92f6"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none">
+																<font fontName="ArialFontFamily" isBold="true"/>
+															</textElement>
+															<text><![CDATA[Gross Wages YTD]]></text>
+														</staticText>
+													</jr:columnHeader>
+													<jr:detailCell style="Table_TD" height="30">
+														<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+														<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+															<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isRemoveLineWhenBlank="true" uuid="a33d38d3-6970-44e6-be83-c7372618d4e3"/>
+															<box leftPadding="4"/>
+															<textElement verticalAlignment="Middle" markup="none"/>
+															<textFieldExpression><![CDATA[$F{grossWagesYTDTxt}]]></textFieldExpression>
+														</textField>
+													</jr:detailCell>
+												</jr:column>
+											</jr:table>
+										</componentElement>
+									</jr:listContents>
+								</jr:list>
+							</componentElement>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</band>
+		</groupHeader>
+	</group>
+</jasperReport>

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KGADB23RB" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<subDataset name="Dataset1" uuid="8ec5a939-c7d6-4f4a-a635-3b3d6e8f4fcf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="prdFrom" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="programType" class="java.lang.String"/>
+	<field name="stateFiscalYearTxt" class="java.lang.String"/>
+	<field name="cashAmount" class="java.lang.Double"/>
+	<field name="debtSetoffAmount" class="java.lang.Double"/>
+	<field name="errorType" class="java.lang.String"/>
+	<sortField name="programType"/>
+	<sortField name="stateFiscalYearTxt"/>
+	<sortField name="errorType"/>
+	<variable name="TotalCashAmount" class="java.lang.Double" resetType="Group" resetGroup="StateFiscalYearGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{cashAmount}]]></variableExpression>
+	</variable>
+	<variable name="TotalDebtSetoffAmount" class="java.lang.Double" resetType="Group" resetGroup="StateFiscalYearGroup" calculation="Sum">
+		<variableExpression><![CDATA[$F{debtSetoffAmount}]]></variableExpression>
+	</variable>
+	<variable name="TotalPriorFyCashAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{stateFiscalYearTxt}.toUpperCase().contains("PRIOR")?$F{cashAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="TotalPriorFyDebtSetoffAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{stateFiscalYearTxt}.toUpperCase().contains("PRIOR")?$F{debtSetoffAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="TotalCurrFyCashAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{stateFiscalYearTxt}.toUpperCase().contains("CURR")?$F{cashAmount}:0]]></variableExpression>
+	</variable>
+	<variable name="TotalCurrFyDebtSetoffAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{stateFiscalYearTxt}.toUpperCase().contains("CURR")?$F{debtSetoffAmount}:0]]></variableExpression>
+	</variable>
+	<group name="ProgramTypeGroup" isReprintHeaderOnEachPage="true" keepTogether="true">
+		<groupExpression><![CDATA[$F{programType}]]></groupExpression>
+		<groupHeader>
+			<band height="18">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField>
+					<reportElement x="1" y="0" width="209" height="18" uuid="cd495525-f77b-4001-9fcb-d5ca69e6e600">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0" lineStyle="Dashed"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["PROGRAM TYPE: "+$F{programType}.toUpperCase()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="20"/>
+		</groupFooter>
+	</group>
+	<group name="StateFiscalYearGroup">
+		<groupExpression><![CDATA[$F{stateFiscalYearTxt}]]></groupExpression>
+		<groupHeader>
+			<band height="18">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="210" height="18" uuid="c92e98eb-cd35-4b32-b891-9fa07d257523">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{stateFiscalYearTxt}.toUpperCase()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="18">
+				<textField textAdjust="StretchHeight">
+					<reportElement x="1" y="0" width="120" height="18" uuid="0cbd2a8b-a9bd-4ad9-8265-f1ed2ea620bb">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="StateFiscalYearGroup" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="388" y="0" width="102" height="18" uuid="cd9139c2-e7d8-4bab-a243-771c4cdfef3b"/>
+					<box rightPadding="4"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalDebtSetoffAmount}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="StateFiscalYearGroup" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="222" y="0" width="102" height="18" uuid="3a571227-cb36-473e-8c54-de7b9c64a0c3"/>
+					<box rightPadding="4"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalCashAmount}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Group" evaluationGroup="StateFiscalYearGroup" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+					<reportElement x="545" y="0" width="102" height="18" uuid="b30ac6ab-a83d-4bed-941f-f2a75a4a1f0b"/>
+					<box rightPadding="4"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{TotalCashAmount} + $V{TotalDebtSetoffAmount}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="62">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="605" y="0" width="146" height="18" uuid="24952ffd-9c6c-4b7d-a64d-1cbcdec95859">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="605" y="18" width="146" height="18" uuid="3eff8847-d407-4ca6-907b-fcf14033590f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="4996692a-73c4-4416-8f5f-5f2148601888">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="37" width="465" height="18" uuid="cc3e8834-fac9-4f66-8648-c43de8b9aa19">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SUMMARY OF TRANSACTIONS CREATED FOR ON-LINE PAYMENTS "+$P{prdFrom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="f4ebc011-9525-4e2d-b34f-3d80bbe88ac0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="170" height="18" uuid="40d10bd5-91e7-4941-bc11-5b6c75d2a589">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="170" height="18" uuid="0b0705d5-2027-4ee5-afc7-72f9eef4a703">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="388" y="0" width="102" height="30" uuid="6d0462dd-484f-4853-a581-94b99952b3c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="none">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATE 
+TAX OFFSET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="102" height="30" uuid="7677b91d-5f54-4cab-ac18-2834b49401aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CASH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="0" width="102" height="30" uuid="90358d22-146c-4182-af4a-3cedadca263c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="222" y="0" width="102" height="18" uuid="8240072c-85a8-4e42-8fb2-65a6991226d5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cashAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="545" y="0" width="102" height="18" uuid="2c0788f4-db9e-4fa3-8046-e07b1d5fa866"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cashAmount} + $F{debtSetoffAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#;(#,##0.00#-)" isBlankWhenNull="true">
+				<reportElement x="1" y="0" width="209" height="18" uuid="5b888180-a02c-4798-bdda-aed0f93941f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ERROR TYPE "+$F{errorType}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="388" y="0" width="102" height="18" uuid="54f0d028-c2b3-464f-b724-91c6997d7284"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{debtSetoffAmount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="59">
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="222" y="5" width="102" height="18" uuid="bb260e1a-0541-4b67-ac85-2003aed8e39e"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalCurrFyCashAmount}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="1" y="5" width="209" height="18" uuid="549a382b-cab9-4a45-9c37-c4e4c4b7865e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL CURRENT STATE FISCAL YEAR"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="222" y="23" width="102" height="18" uuid="f8d100bd-8f68-4d01-9275-0ce838df54f9"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalPriorFyCashAmount}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="222" y="41" width="102" height="18" uuid="4224cf00-331e-4394-bec8-18c6184db5d2"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalPriorFyCashAmount}+$V{TotalCurrFyCashAmount}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="1" y="41" width="139" height="18" uuid="b6e287cb-f8e4-4f03-9396-9f511e9dcdd9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["GRAND TOTAL"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="1" y="23" width="209" height="18" uuid="64a62b65-ee1f-4383-93f1-ff30ce25a080"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL PRIOR STATE FISCAL YEAR"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="388" y="23" width="102" height="18" uuid="b4201a4a-d1c8-4d84-b38a-4dc54a03c2a9"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalPriorFyDebtSetoffAmount}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="388" y="5" width="102" height="18" uuid="24a0489d-1ee9-4e8e-9db3-e5a4c5e87acb"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalCurrFyDebtSetoffAmount}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="388" y="41" width="102" height="18" uuid="3b23a952-ab18-4686-9ce5-3bfdf97dc948"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalPriorFyDebtSetoffAmount}+$V{TotalCurrFyDebtSetoffAmount}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="545" y="5" width="102" height="18" uuid="d0e09ccd-900b-4362-a74b-f6f17c648ee5"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalCurrFyCashAmount}+$V{TotalCurrFyDebtSetoffAmount}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="545" y="41" width="102" height="18" uuid="e029ab9d-d4df-4a9d-a016-ad891c319020"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalPriorFyCashAmount} + $V{TotalPriorFyDebtSetoffAmount}+$V{TotalCurrFyCashAmount}+$V{TotalCurrFyDebtSetoffAmount}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="¤#,##0.00;¤(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="545" y="23" width="102" height="18" uuid="75740f2a-942b-4389-9562-a198bbfb64df"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalPriorFyCashAmount} + $V{TotalPriorFyDebtSetoffAmount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+	<noData>
+		<band height="115">
+			<textField>
+				<reportElement x="605" y="0" width="146" height="18" uuid="3bed196b-cb70-4b7d-ae03-3146b48088dd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="170" height="18" uuid="1139952c-6eab-48d2-9ef0-8b02ba1d84e5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="6703954a-cfa6-4c20-99cb-c31da3fdc0bb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="447c8d7f-c7f1-4d55-baa4-faa844d5ff87">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="18" width="170" height="18" uuid="a914f591-2932-48b2-8202-34f1a3ec455c">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="37" width="465" height="18" uuid="2928b25e-ce8c-4d89-896a-32fea7170773">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SUMMARY OF TRANSACTIONS CREATED FOR ON-LINE PAYMENTS "+$P{prdFrom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="97" width="470" height="18" uuid="24e5697f-3ab0-46fa-861a-b1db14f0f29c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="605" y="19" width="145" height="18" uuid="37398654-d937-468a-aff8-59b3e4aadfa1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<text><![CDATA[PAGE: 1 OF 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="67" width="102" height="30" uuid="1df55608-24f6-4498-b819-fe1e59c9b091">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="none">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATE 
+TAX OFFSET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="102" height="30" uuid="4f101b3a-73c5-4f7d-b472-f9edc036aa35">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CASH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="67" width="102" height="30" uuid="456edb42-35fa-4ce5-86ce-f15e3e89bc21">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

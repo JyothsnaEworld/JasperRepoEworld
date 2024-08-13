@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KGAMB02R" pageWidth="792" pageHeight="652" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="d07a10bf-a2d5-4ac2-93d6-dbb423edc7f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<subDataset name="Dataset1" uuid="8ec5a939-c7d6-4f4a-a635-3b3d6e8f4fcf">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="rptExtractTSTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptExtractDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="rptMonthEndDtTxt" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="clientPrograms" class="java.lang.String"/>
+	<field name="oneClientFraud" class="java.lang.Double"/>
+	<field name="oneClientNonFraud" class="java.lang.Double"/>
+	<field name="oneClientAdministrative" class="java.lang.Double"/>
+	<field name="twoClientFraud" class="java.lang.Double"/>
+	<field name="twoClientNonFraud" class="java.lang.Double"/>
+	<field name="twoClientAdministrative" class="java.lang.Double"/>
+	<field name="threeClientFraud" class="java.lang.Double"/>
+	<field name="threeClientNonFraud" class="java.lang.Double"/>
+	<field name="threeClientAdministrative" class="java.lang.Double"/>
+	<field name="fourClientFraud" class="java.lang.Double"/>
+	<field name="fourClientNonFraud" class="java.lang.Double"/>
+	<field name="fourClientAdministrative" class="java.lang.Double"/>
+	<field name="fiveClientFraud" class="java.lang.Double"/>
+	<field name="fiveClientNonFraud" class="java.lang.Double"/>
+	<field name="fiveClientAdministrative" class="java.lang.Double"/>
+	<field name="sixClientFraud" class="java.lang.Double"/>
+	<field name="sixClientNonFraud" class="java.lang.Double"/>
+	<field name="sixClientAdministrative" class="java.lang.Double"/>
+	<field name="sevenClientFraud" class="java.lang.Double"/>
+	<field name="sevenClientNonFraud" class="java.lang.Double"/>
+	<field name="sevenClientAdministrative" class="java.lang.Double"/>
+	<field name="eightClientFraud" class="java.lang.Double"/>
+	<field name="eightClientNonFraud" class="java.lang.Double"/>
+	<field name="eightClientAdministrative" class="java.lang.Double"/>
+	<field name="nineClientFraud" class="java.lang.Double"/>
+	<field name="nineClientNonFraud" class="java.lang.Double"/>
+	<field name="nineClientAdministrative" class="java.lang.Double"/>
+	<field name="tenClientFraud" class="java.lang.Double"/>
+	<field name="tenClientNonFraud" class="java.lang.Double"/>
+	<field name="tenClientAdministrative" class="java.lang.Double"/>
+	<field name="elevenClientFraud" class="java.lang.Double"/>
+	<field name="elevenClientNonFraud" class="java.lang.Double"/>
+	<field name="elevenClientAdministrative" class="java.lang.Double"/>
+	<field name="twelveClientFraud" class="java.lang.Double"/>
+	<field name="twelveClientNonFraud" class="java.lang.Double"/>
+	<field name="twelveClientAdministrative" class="java.lang.Double"/>
+	<field name="thirteenClientFraud" class="java.lang.Double"/>
+	<field name="thirteenClientNonFraud" class="java.lang.Double"/>
+	<field name="thirteenClientAdministrative" class="java.lang.Double"/>
+	<field name="fourteenClientFraud" class="java.lang.Double"/>
+	<field name="fourteenClientNonFraud" class="java.lang.Double"/>
+	<field name="fourteenClientAdministrative" class="java.lang.Double"/>
+	<field name="fifteenClientFraud" class="java.lang.Double"/>
+	<field name="fifteenClientNonFraud" class="java.lang.Double"/>
+	<field name="fifteenClientAdministrative" class="java.lang.Double"/>
+	<field name="sixteenClientFraud" class="java.lang.Double"/>
+	<field name="sixteenClientNonFraud" class="java.lang.Double"/>
+	<field name="sixteenClientAdministrative" class="java.lang.Double"/>
+	<field name="clientsWaived" class="java.lang.Double"/>
+	<group name="ProgramCodeGroup" isStartNewPage="true" keepTogether="true">
+		<groupExpression><![CDATA[$F{clientPrograms}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<staticText>
+					<reportElement x="290" y="0" width="95" height="30" uuid="8f6cdf9a-dc60-4a98-8ed7-5dcc256e7861">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FRAUD
+--------------------------]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="0" width="280" height="30" uuid="cd495525-f77b-4001-9fcb-d5ca69e6e600">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["PROGRAM "+$F{clientPrograms}.toUpperCase()+"\n"+"----------------------------------------------------------------------------------------------"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="395" y="0" width="95" height="30" uuid="d0cc2d16-4e45-464b-8647-7823e139f7a4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NON-FRAUD
+--------------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="500" y="0" width="95" height="30" uuid="f300c841-c49d-4c2b-9946-2848b22cf835">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ADMINISTRATIVE
+---------------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="605" y="0" width="95" height="30" uuid="e93b53d7-285a-4df2-8ffd-cc13129d7c58">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="ArialFontFamily" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOTAL
+--------------------------]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="78">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="608" y="0" width="144" height="18" uuid="24952ffd-9c6c-4b7d-a64d-1cbcdec95859">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master">
+				<reportElement x="608" y="18" width="144" height="18" uuid="3eff8847-d407-4ca6-907b-fcf14033590f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PAGE: "+$V{MASTER_CURRENT_PAGE}+" OF "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="4996692a-73c4-4416-8f5f-5f2148601888">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="f4ebc011-9525-4e2d-b34f-3d80bbe88ac0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="40d10bd5-91e7-4941-bc11-5b6c75d2a589">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="0b0705d5-2027-4ee5-afc7-72f9eef4a703">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="54" width="390" height="18" uuid="2e1916de-472d-4c1a-ae4e-21a419f99b93">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MONTH END: "+ $P{rptMonthEndDtTxt}.substring( 0,3 )+ $P{rptMonthEndDtTxt}.substring( $P{rptMonthEndDtTxt}.length()-4, $P{rptMonthEndDtTxt}.length())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="36" width="390" height="18" uuid="08a0e418-3d77-42f4-b893-f2af403bcd1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATEMENT OF RECEIVABLES AND COLLECTIONS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="486">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="0" width="95" height="18" uuid="fc731d13-1562-49cb-baf5-3dc57f6e153e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="0" width="95" height="18" uuid="dc06c683-a6bc-4dfa-82cc-46678d71fcbb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="0" width="95" height="18" uuid="035f03b3-5052-4c54-8264-34ba105054d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="0" width="95" height="18" uuid="4304a9d2-a9c3-453a-9665-02b8cb5a5b4b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{oneClientFraud} + $F{oneClientNonFraud} + $F{oneClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="280" height="18" uuid="c92e98eb-cd35-4b32-b891-9fa07d257523"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["A. BEGINNING BALANCE RECEIVABLES"]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="42" width="95" height="18" uuid="5b888180-a02c-4798-bdda-aed0f93941f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twoClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="42" width="95" height="18" uuid="8d63d58f-4089-442d-b2eb-09fc4079f9ad">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twoClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="42" width="95" height="18" uuid="a04105b7-3b96-4c3b-98d6-5edcb3ef21f0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twoClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="42" width="95" height="18" uuid="ed6d4870-8bca-4918-bfde-fc149f815f58">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{twoClientFraud} + $F{twoClientNonFraud} + $F{twoClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="22" width="280" height="18" uuid="de1f41f1-8ac5-4615-8404-cbe22cd778a1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["B. ADD OVERPAYMENTS ESTABLISHED"]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="60" width="95" height="18" uuid="8240072c-85a8-4e42-8fb2-65a6991226d5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{threeClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="60" width="95" height="18" uuid="c8a4915c-5c42-43ef-af9d-6df787773dd1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{threeClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="60" width="95" height="18" uuid="fc76abcd-4f6d-41f9-acaa-d8a5e19a6f69">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{threeClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="60" width="95" height="18" uuid="04e831c6-009c-4f2b-a358-11dd1cbabd7a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{threeClientFraud} + $F{threeClientNonFraud} + $F{threeClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="124" width="280" height="18" uuid="6d235141-efa8-4761-92e8-985619c400bf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["C. DEDUCT COLLECTIONS & LIQUIDATIONS"]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="78" width="95" height="18" uuid="5a3710d3-b591-4f00-97d2-f1289c01ce10">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="78" width="95" height="18" uuid="c52b71ed-0613-4c7b-b003-666932dc6042">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="78" width="95" height="18" uuid="a55f9777-8921-4212-9fe7-0d602447c947">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="78" width="95" height="18" uuid="0ae800a9-4839-4165-bf9f-d01bdddf4f44">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{fourClientFraud} + $F{fourClientNonFraud} + $F{fourClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="334" width="280" height="18" uuid="1f8ccd64-228d-4149-86fc-7068250788cf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["D. ADD REFUNDS"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="42" width="260" height="18" uuid="e561fde6-c761-4f95-b35b-9e284fef9d29"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. NEW OVERPAYMENTS - ACTIVE"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="60" width="260" height="18" uuid="f1b6a47a-c493-48db-87f8-bada4f2955e1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["                                            - INACTIVE"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="78" width="260" height="18" uuid="e3d418aa-6f29-4df6-8708-4f07c6a0a240"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2. OVERPAYMENT ADJUSTMENTS"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="102" width="260" height="18" uuid="21128a82-0840-4de9-8796-160bd4298b73"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="102" width="95" height="18" uuid="b628a3a8-0082-449f-818e-deddd1710380">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twoClientFraud} + $F{threeClientFraud} + $F{fourClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="102" width="95" height="18" uuid="31476f7c-d25c-40a1-90cc-40d100145097">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twoClientNonFraud} + $F{threeClientNonFraud} + $F{fourClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="102" width="95" height="18" uuid="53de4b95-5e6e-4996-8b32-240db5aacecd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twoClientAdministrative} + $F{threeClientAdministrative} + $F{fourClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="102" width="95" height="18" uuid="91b6a00f-bf95-4111-a439-a4060b078947">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{twoClientFraud} + $F{twoClientNonFraud} + $F{twoClientAdministrative}) + ($F{threeClientFraud} + $F{threeClientNonFraud} + $F{threeClientAdministrative}) + ($F{fourClientFraud} + $F{fourClientNonFraud} + $F{fourClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="144" width="260" height="18" uuid="a635d646-bfc2-419f-89cb-e70de106e89d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["0. CASH RECOVERIES FROM ACTIVE CLIENT"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="162" width="260" height="18" uuid="f36c0305-592a-4277-a125-3dc7a79bdfc0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["    CASH RECOVERIES FROM INACTIVE CLIENT"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="180" width="260" height="18" uuid="0c967ecf-3d92-4048-b7fe-4b7269a5659a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. DEBT SET OFF"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="198" width="260" height="18" uuid="3d6ebc5e-b0ec-4ff6-b1a4-1f736b4928f3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2. RECOVERIES THRU AUTOMATIC RECOUPMENT"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="216" width="260" height="18" uuid="6ac71064-caf6-4443-82e6-8a45254f0db7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["3. RETURNED FOOD STAMPS"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="234" width="260" height="18" uuid="8ebad0e3-3e0a-4f53-95b4-95cca2c7e3c9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["4. RECOVERIES THRU OFFSET"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="252" width="260" height="18" uuid="b8cbb62b-14e8-4ac6-bbdb-b4c67bc75fc8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["5. TERMINATED"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="270" width="260" height="18" uuid="f6e53de6-f9f7-40f4-a7c3-50d13cbaa8ab"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["6. WAIVED"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="288" width="260" height="18" uuid="7699835b-24c0-44e6-bf3e-d210466f261b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["7. LEGAL COMPROMISE"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="312" width="260" height="18" uuid="db9c345f-cf8c-427e-bae4-49583610b2c6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="312" width="95" height="18" uuid="58f82b65-85fb-46bc-9094-635fea1438d4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiveClientFraud} + $F{sixClientFraud} + $F{sevenClientFraud} + $F{eightClientFraud} + $F{nineClientFraud} + $F{tenClientFraud} + $F{elevenClientFraud} + $F{twelveClientFraud} + $F{thirteenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="312" width="95" height="18" uuid="068430cc-e1a2-4c83-820d-73993ad1da01">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiveClientNonFraud} + $F{sixClientNonFraud} + $F{sevenClientNonFraud} + $F{eightClientNonFraud} + $F{nineClientNonFraud} + $F{tenClientNonFraud} + $F{elevenClientNonFraud} + $F{twelveClientNonFraud} + $F{thirteenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="313" width="95" height="18" uuid="adca35f3-0f37-490d-b130-9dbf8d0a4412">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiveClientAdministrative} + $F{sixClientAdministrative} + $F{sevenClientAdministrative}+
+$F{eightClientAdministrative} + $F{nineClientAdministrative} + $F{tenClientAdministrative}+
+$F{elevenClientAdministrative} + $F{twelveClientAdministrative} + $F{thirteenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="313" width="95" height="18" uuid="dc8ebd35-6a9e-4382-8085-264701f64ed7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{fiveClientFraud} + $F{fiveClientNonFraud} + $F{fiveClientAdministrative}) +
+($F{sixClientFraud} + $F{sixClientNonFraud} + $F{sixClientAdministrative})+
+($F{sevenClientFraud} + $F{sevenClientNonFraud} + $F{sevenClientAdministrative})+
+($F{eightClientFraud} + $F{eightClientNonFraud} + $F{eightClientAdministrative})+
+($F{nineClientFraud} + $F{nineClientNonFraud} + $F{nineClientAdministrative})+
+($F{tenClientFraud} + $F{tenClientNonFraud} + $F{tenClientAdministrative}) +
+($F{elevenClientFraud} + $F{elevenClientNonFraud} + $F{elevenClientAdministrative}) +
+($F{twelveClientFraud} + $F{twelveClientNonFraud} + $F{twelveClientAdministrative}) +
+($F{thirteenClientFraud} + $F{thirteenClientNonFraud} + $F{thirteenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="354" width="260" height="18" uuid="d9f156e8-1f1d-4e4f-8ba3-7d63644afa63"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. CASH"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="372" width="260" height="18" uuid="50b17609-dfce-4f4e-beca-3c407231483c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2. RECOUPMENT"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="390" width="260" height="18" uuid="f609b3b9-006e-441d-b6ba-99a620b3a0c1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["3. DEBT SET OFF"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="436" width="280" height="18" uuid="5cd43fa3-32ab-4ff5-9a62-d371a04bb72b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["E. ENDING BALANCE RECEIVABLES"]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="436" width="95" height="18" uuid="7e4e6738-083c-43bc-9139-ac7f05a3401f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneClientFraud} + ($F{twoClientFraud} + $F{threeClientFraud} + $F{fourClientFraud}) - ($F{fiveClientFraud} + $F{sixClientFraud} + $F{sevenClientFraud} + $F{eightClientFraud} + $F{nineClientFraud} + $F{tenClientFraud} + $F{elevenClientFraud} + $F{twelveClientFraud} + $F{thirteenClientFraud}) + ($F{fourteenClientFraud} + $F{fifteenClientFraud} + $F{sixteenClientFraud})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="436" width="95" height="18" uuid="41e51804-a1fa-4447-b4ad-6fcbfa95b7c0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dashed" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneClientNonFraud} + ($F{twoClientNonFraud} + $F{threeClientNonFraud} + $F{fourClientNonFraud}) - ($F{fiveClientNonFraud} + $F{sixClientNonFraud} + $F{sevenClientNonFraud} + $F{eightClientNonFraud} + $F{nineClientNonFraud} + $F{tenClientNonFraud} + $F{elevenClientNonFraud} + $F{twelveClientNonFraud} + $F{thirteenClientNonFraud}) + ($F{fourteenClientNonFraud} + $F{fifteenClientNonFraud} + $F{sixteenClientNonFraud})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="435" width="95" height="18" uuid="eebc0938-ec8a-42f9-80f4-0d7d8a56fa80">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oneClientAdministrative} + ($F{twoClientAdministrative} + $F{threeClientAdministrative} + $F{fourClientAdministrative}) - ($F{fiveClientAdministrative} + $F{sixClientAdministrative} + $F{sevenClientAdministrative} + $F{eightClientAdministrative} + $F{nineClientAdministrative} + $F{tenClientAdministrative} + $F{elevenClientAdministrative} + $F{twelveClientAdministrative} + $F{thirteenClientAdministrative}) + ($F{fourteenClientAdministrative} + $F{fifteenClientAdministrative} + $F{sixteenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="435" width="95" height="18" uuid="85d94fc3-7408-4c7e-b17d-17bb82d6b994">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{oneClientFraud} + ($F{twoClientFraud} + $F{threeClientFraud} + $F{fourClientFraud}) - ($F{fiveClientFraud} + $F{sixClientFraud} + $F{sevenClientFraud} + $F{eightClientFraud} + $F{nineClientFraud} + $F{tenClientFraud} + $F{elevenClientFraud} + $F{twelveClientFraud} + $F{thirteenClientFraud}) + ($F{fourteenClientFraud} + $F{fifteenClientFraud} + $F{sixteenClientFraud})) + ($F{oneClientNonFraud} + ($F{twoClientNonFraud} + $F{threeClientNonFraud} + $F{fourClientNonFraud}) - ($F{fiveClientNonFraud} + $F{sixClientNonFraud} + $F{sevenClientNonFraud} + $F{eightClientNonFraud} + $F{nineClientNonFraud} + $F{tenClientNonFraud} + $F{elevenClientNonFraud} + $F{twelveClientNonFraud} + $F{thirteenClientNonFraud}) + ($F{fourteenClientNonFraud} + $F{fifteenClientNonFraud} + $F{sixteenClientNonFraud})) + ($F{oneClientAdministrative} + ($F{twoClientAdministrative} + $F{threeClientAdministrative} + $F{fourClientAdministrative}) - ($F{fiveClientAdministrative} + $F{sixClientAdministrative} + $F{sevenClientAdministrative} + $F{eightClientAdministrative} + $F{nineClientAdministrative} + $F{tenClientAdministrative} + $F{elevenClientAdministrative} + $F{twelveClientAdministrative} + $F{thirteenClientAdministrative}) + ($F{fourteenClientAdministrative} + $F{fifteenClientAdministrative} + $F{sixteenClientAdministrative}))]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="180" y="464" width="60" height="18" uuid="90abb070-ff63-4d85-bac6-d9f0c449e30d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientsWaived}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="144" width="95" height="18" uuid="b9445ad5-ba0d-4676-bdae-4900c1251423">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiveClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="144" width="95" height="18" uuid="472e9da9-487f-4d40-9627-80a59d96f0f6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiveClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="144" width="95" height="18" uuid="3da79e3f-f682-48c8-9807-8a3313321c49">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fiveClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="144" width="95" height="18" uuid="0de9aeb8-9f93-4809-a069-4e09ee97ba90">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{fiveClientFraud} + $F{fiveClientNonFraud} + $F{fiveClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="162" width="95" height="18" uuid="ceafa665-8939-42dc-9d3d-aaa3510d3898">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="162" width="95" height="18" uuid="a393bd82-9fbf-430f-aabb-dff58aa8df78">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="162" width="95" height="18" uuid="0493b1d1-c681-4db0-86c9-704a911ffcce">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="162" width="95" height="18" uuid="5c584459-8c64-4cab-b833-e81a3146d7dc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{sixClientFraud} + $F{sixClientNonFraud} + $F{sixClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="180" width="95" height="18" uuid="a113ae27-6b9c-4c61-b3d4-bb0a49abd888">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sevenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="180" width="95" height="18" uuid="20f96f18-e8af-4869-b678-06ee0b24551c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sevenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="180" width="95" height="18" uuid="460186c2-aba7-487a-877e-1b9b98444d19">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sevenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="180" width="95" height="18" uuid="8ce67de6-fc57-4f4e-9b7e-ab1477d6d155">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{sevenClientFraud} + $F{sevenClientNonFraud} + $F{sevenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="198" width="95" height="18" uuid="ebde0a50-a4a6-4dee-8f0d-588e302e6c6d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eightClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="198" width="95" height="18" uuid="87ef5ed5-5544-4158-902d-f8ace9c0f271">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eightClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="198" width="95" height="18" uuid="1a1daf84-4976-4e81-aab2-e9e91bfb6a78">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{eightClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="198" width="95" height="18" uuid="b4a42596-0cfb-4f4c-a825-073ca8c8a290">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{eightClientFraud} + $F{eightClientNonFraud} + $F{eightClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="216" width="95" height="18" uuid="9f0bae2e-8400-4e35-a107-76f5ab38cd62">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nineClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="216" width="95" height="18" uuid="52893208-4a58-436c-8301-2e5ff475bc30">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nineClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="216" width="95" height="18" uuid="35c92942-b7e7-44cb-86a0-e63238314886">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nineClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="216" width="95" height="18" uuid="48c0e00f-9530-405f-b7dd-a85175c460e5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{nineClientFraud} + $F{nineClientNonFraud} + $F{nineClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="234" width="95" height="18" uuid="c9bb84b1-4704-43d2-8a66-3324d2d93b3e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="234" width="95" height="18" uuid="bfba417c-2822-49c1-861a-94288394fbd9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="234" width="95" height="18" uuid="703a2a38-4a78-4a4a-8a01-1c047cda67aa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="234" width="95" height="18" uuid="8fa9b103-967b-4c29-8ca9-cb907f30cff6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{tenClientFraud} + $F{tenClientNonFraud} + $F{tenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="252" width="95" height="18" uuid="a9eb8a95-4e7f-436b-8505-425fc695cdd7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{elevenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="252" width="95" height="18" uuid="9a25fa8f-29ab-4ddb-99e5-8221702aa44c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{elevenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="252" width="95" height="18" uuid="11507386-d8db-418d-9702-781737870b07">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{elevenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="252" width="95" height="18" uuid="aed2e3f6-adcb-44fb-9b9c-f5a3230bb534">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{elevenClientFraud} + $F{elevenClientNonFraud} + $F{elevenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="270" width="95" height="18" uuid="dd78f5bb-aa97-4d8f-9597-7f983f1c49ac">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twelveClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="270" width="95" height="18" uuid="569c9e0a-c6b3-4ba7-87bd-3ff742ad6663">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twelveClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="270" width="95" height="18" uuid="545b7e59-48c0-4530-99e2-8695e91771c6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{twelveClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="270" width="95" height="18" uuid="f493a46a-816f-4e3e-a538-dd878d41816c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{twelveClientFraud} + $F{twelveClientNonFraud} + $F{twelveClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="288" width="95" height="18" uuid="53e2d83e-1e47-41be-b8fc-f67fd4e0c86c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thirteenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="288" width="95" height="18" uuid="256875b8-b8d2-43f5-96f5-ca278f2e5d16">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thirteenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="288" width="95" height="18" uuid="7ab20967-0dde-4cae-ac99-8d91f4d56363">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thirteenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="288" width="95" height="18" uuid="4e5ca55e-2f5c-4626-970e-eaf00ef063fd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{thirteenClientFraud} + $F{thirteenClientNonFraud} + $F{thirteenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="354" width="95" height="18" uuid="1619ca00-cc20-442e-8466-13299f530198">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourteenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="354" width="95" height="18" uuid="83f5eb00-d827-4670-87f7-04bec7571bfb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourteenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="354" width="95" height="18" uuid="5c8b9001-2717-43e4-9161-7ad39d203bc4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourteenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="354" width="95" height="18" uuid="dbf70613-a71f-45af-a185-6ffa52687f46">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{fourteenClientFraud} + $F{fourteenClientNonFraud} + $F{fourteenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="372" width="95" height="18" uuid="c8ad2d82-5f9d-4419-aac9-1826cfd46ecf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fifteenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="372" width="95" height="18" uuid="e761b415-75ce-4bf2-81f0-ce34940ca9aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fifteenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="372" width="95" height="18" uuid="77e3d012-4011-4f3a-bf63-e7af11431377">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fifteenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="372" width="95" height="18" uuid="27a3cf06-295e-4916-b36e-5a53a664d50d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{fifteenClientFraud} + $F{fifteenClientNonFraud} + $F{fifteenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="390" width="95" height="18" uuid="1e347a93-8122-471a-909a-b06a50748846">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixteenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="390" width="95" height="18" uuid="2d644cfa-d5dd-4e55-8671-82f9427c7574">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixteenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="390" width="95" height="18" uuid="68d1c582-8f23-4188-a5fe-8ce1ce87e742">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sixteenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="390" width="95" height="18" uuid="e8cb646c-a109-4f5c-8568-4ddd83b1599b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{sixteenClientFraud} + $F{sixteenClientNonFraud} + $F{sixteenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="414" width="260" height="18" uuid="de7f111b-a581-41f6-84e0-4eda97798428"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="290" y="414" width="95" height="18" uuid="148ce564-0d1b-4f04-b860-0ccb960bd371">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourteenClientFraud}+$F{fifteenClientFraud}+$F{sixteenClientFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="395" y="414" width="95" height="18" uuid="b707a17d-dca5-4c79-9eba-3fbd90ce91a7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourteenClientNonFraud}+$F{fifteenClientNonFraud}+$F{sixteenClientNonFraud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="500" y="415" width="95" height="18" uuid="72cf8ddb-4738-4727-88c4-4a48a67e272d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fourteenClientAdministrative}+$F{fifteenClientAdministrative}+$F{sixteenClientAdministrative}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤(#,##0.00)">
+				<reportElement x="605" y="415" width="95" height="18" uuid="4114849e-23af-4454-9332-dacfbbf234e0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box rightPadding="8">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{fourteenClientFraud} + $F{fourteenClientNonFraud} + $F{fourteenClientAdministrative})+($F{fifteenClientFraud} + $F{fifteenClientNonFraud} + $F{fifteenClientAdministrative})+($F{sixteenClientFraud} + $F{sixteenClientNonFraud} + $F{sixteenClientAdministrative})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="464" width="160" height="18" uuid="efeb0930-8f71-468b-8df2-d0ae4d134e7b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="10"/>
+				</textElement>
+				<text><![CDATA[NUMBER OF CLIENTS WAIVED:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<noData>
+		<band height="130">
+			<textField>
+				<reportElement x="0" y="18" width="160" height="18" uuid="97527911-319a-4f4e-9d8f-fe9ad58584ca">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT TIME: "+$P{rptExtractTSTxt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="160" height="18" uuid="eee7cb9a-405a-4bf4-99c4-155efb97b671">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTRACT DATE: "+$P{rptExtractDtTxt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="18" width="390" height="18" uuid="63afdc93-f638-4235-9594-3b1c70a9b1e7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFITS ELIGIBILITY SOLUTION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="608" y="0" width="144" height="18" uuid="9e83a933-3126-49d4-8c42-a5a39b46b109">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MM/dd/yyyy").format(new Date(System.currentTimeMillis() - 10 * 3600 * 1000))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="390" height="18" uuid="44f32036-685f-49f1-8733-79039f64b0c2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAWAI'I DEPARTMENT OF HUMAN SERVICES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="112" width="280" height="18" uuid="b6e92064-1b34-410e-a78d-14e842b37b42">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialFontFamily"/>
+				</textElement>
+				<text><![CDATA[NO DATA AVAILABLE FOR THIS REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="608" y="18" width="144" height="18" uuid="d24e5448-93c5-4731-a8ec-3f51366c484d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="11"/>
+				</textElement>
+				<text><![CDATA[PAGE: 1 OF 1]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="54" width="390" height="18" uuid="51c24c49-2377-49b2-b3ee-8a3ff90ad6ef">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MONTH END: "+ $P{rptMonthEndDtTxt}.substring( 0,3 )+ $P{rptMonthEndDtTxt}.substring( $P{rptMonthEndDtTxt}.length()-4, $P{rptMonthEndDtTxt}.length())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="36" width="390" height="18" uuid="396330b3-c4d4-4971-9d30-b9a0b71b291c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialFontFamily" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATEMENT OF RECEIVABLES AND COLLECTIONS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="82" width="95" height="30" uuid="b45694c7-331c-487b-9fea-e751413d481a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FRAUD
+--------------------------]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="82" width="280" height="30" uuid="a41726be-faec-4d0b-afab-34ac8495870d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PROGRAM"+"\n"+"----------------------------------------------------------------------------------------------"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="395" y="82" width="95" height="30" uuid="f88d1296-e9db-4bc9-b5ea-eb2900b1e9aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NON-FRAUD
+--------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="82" width="95" height="30" uuid="9de871ef-2b7f-46f4-b5b5-b10769e3ecc9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRATIVE
+---------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="605" y="82" width="95" height="30" uuid="35cf78ab-7bc4-436d-a732-b654b1180bb1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="ArialFontFamily" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL
+--------------------------]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>
